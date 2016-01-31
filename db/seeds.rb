@@ -29,4 +29,7 @@ Strategy.create(rock: 1, paper: 3, scissors: 2)
 Strategy.create(rock: 2, paper: 3, scissors: 1)
 Strategy.create(rock: 3, paper: 2, scissors: 1)
 
-
+Wizard.create(name: "Test Wiz 1", magic_type: 0, strategy_id: 1)
+Wizard.create(name: "Test Wiz 2", magic_type: 0, strategy_id: 2)
+Wizard.create(name: "Test Wiz 3", magic_type: 1, strategy_id: 3)
+Wizard.create(name: "Test Wiz 4", magic_type: 1, strategy_id: 10)
