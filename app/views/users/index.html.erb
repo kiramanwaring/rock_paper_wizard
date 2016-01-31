@@ -1,0 +1,17 @@
+index
+
+<%= content_tag :h1, "Users" %>
+
+<% @users.each do |u| %>
+<h1>
+<%= u.email %>
+</h1>
+<% end %>
+
+<% if @user.id == @current_user.id %>
+<%= link_to "signout", log_out_path %>
+<% end %>
+
+<% if @user.id == @current_user.id %>
+<%= link_to("Delete", user_path(@user), method: :delete) %>
+<% end %>
