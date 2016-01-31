@@ -8,15 +8,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'users#new'
-
+  post 'sessions/create' => 'sessions#create', as: :user_login
   get 'login' => 'sessions#new', as: :login
-  post 'login' => 'sessions#create'
   delete 'sessions/destroy' => 'session#destroy', as: :log_out
 
   resources :users
-  resources :posts
-  resources :profiles
-  resources :comments
+  resources :wizards
+  resources :sessions
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -25,7 +23,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :users, :wizards, :sessions
+  #   resources :products
 
   # Example resource route with options:
   #   resources :products do
