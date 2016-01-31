@@ -8,4 +8,19 @@ class Wizard < ActiveRecord::Base
 	  self.attack = 1 + rand(3)
 	  self.defense = 3 - self.attack
 	end
+	def Battle
+		
+	end
+	def hp_decriment
+	end
+	def lives_decriment
+		
+	end
+	def exp_increment
+		
+	end
+	def level_increment
+		
+	end
+
 end
