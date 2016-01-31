@@ -2,7 +2,7 @@ class CreateWizards < ActiveRecord::Migration
   def change
     create_table :wizards do |t|
       t.string :name
-      t.integer :type
+      t.integer :magic_type
       t.integer :level
       t.integer :lives
       t.integer :hp
