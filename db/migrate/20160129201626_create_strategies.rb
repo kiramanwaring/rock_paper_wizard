@@ -1,9 +1,9 @@
 class CreateStrategies < ActiveRecord::Migration
   def change
     create_table :strategies do |t|
-      t.string :rock
-      t.string :paper
-      t.string :scissors
+      t.integer :rock
+      t.integer :paper
+      t.integer :scissors
 
       t.timestamps null: false
     end

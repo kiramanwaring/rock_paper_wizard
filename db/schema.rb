@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20160129201626) do
 
   create_table "strategies", force: :cascade do |t|
-    t.string   "rock"
-    t.string   "paper"
-    t.string   "scissors"
+    t.integer  "rock"
+    t.integer  "paper"
+    t.integer  "scissors"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

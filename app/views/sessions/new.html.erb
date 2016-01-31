@@ -1,0 +1,13 @@
+<h1>Sign in</h1>
+
+<%= form_tag user_login_path do%>
+<%= label_tag :Email %>
+<%= text_field_tag :email %>
+<%= label_tag :Password %>
+<%= password_field_tag :password_digest %>
+<%= submit_tag :Sign_In, :value => "Sign In", method: :user_login %>
+<% end %>
+
+<% if @current_user %>
+<%= link_to "signout", log_out_path %>
+<%end%>
