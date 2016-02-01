@@ -7,21 +7,22 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
+# these are the only strategies possible in RPSW, here they are sorted by style
+# these strategies rely on using the same move every turn
 Strategy.create(rock: 6, paper: 0, scissors: 0)
 Strategy.create(rock: 0, paper: 6, scissors: 0)
 Strategy.create(rock: 0, paper: 0, scissors: 6)
-
+# these strategies split their moves between two options
 Strategy.create(rock: 3, paper: 3, scissors: 0)
 Strategy.create(rock: 0, paper: 3, scissors: 3)
 Strategy.create(rock: 3, paper: 0, scissors: 3)
-
+# this strategy uses all 3 moves equally
+Strategy.create(rock: 2, paper: 2, scissors: 2)
+# these strategies use all 3 moves, with a strong preference toward one
 Strategy.create(rock: 4, paper: 1, scissors: 1)
 Strategy.create(rock: 1, paper: 4, scissors: 1)
 Strategy.create(rock: 1, paper: 1, scissors: 4)
-
-Strategy.create(rock: 2, paper: 2, scissors: 2)
-
+# these strategies have a blend of three that is less biased
 Strategy.create(rock: 1, paper: 2, scissors: 3)
 Strategy.create(rock: 2, paper: 1, scissors: 3)
 Strategy.create(rock: 3, paper: 1, scissors: 2)
@@ -29,7 +30,10 @@ Strategy.create(rock: 1, paper: 3, scissors: 2)
 Strategy.create(rock: 2, paper: 3, scissors: 1)
 Strategy.create(rock: 3, paper: 2, scissors: 1)
 
+
+# these are example wizards for testing, they will eventually be the NPC library
 Wizard.create(name: "Test Wiz 1", magic_type: 0, strategy_id: 1)
-Wizard.create(name: "Test Wiz 2", magic_type: 0, strategy_id: 2)
-Wizard.create(name: "Test Wiz 3", magic_type: 1, strategy_id: 3)
+# Wizard.create(name: "Test Wiz 2", magic_type: 0, strategy_id: 2)
+# Wizard.create(name: "Test Wiz 3", magic_type: 1, strategy_id: 3)
 Wizard.create(name: "Test Wiz 4", magic_type: 1, strategy_id: 10)
+puts "COMPLETE SEED"
