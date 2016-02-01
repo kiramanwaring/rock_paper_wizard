@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   def show
  # set variable to find user by user_id
   	@user = User.find(params[:id])
-    @current_user = User.find(session[:user_id])
+    @current_user = current_user
     @wizard = Wizard.all
   end
 
