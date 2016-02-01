@@ -1,12 +1,12 @@
 New Wizard
 <%= tag :br %>
-<%= form_tag @wizard do%>
-<%= label_tag :Name %>
-<%= text_field_tag :name %>
+<%= form_for @wizard do |w|%>
+<%= w.label :Name %>
+<%= w.text_field :name %>
 <%= tag :br %>
-<%= label_tag :Magic_Type %>
-<%= text_field_tag :magic_type %>
+<%= w.label :Magic_Type %>
+<%= w.text_field :magic_type %>
 <%= tag :br %>
 
-<%= submit_tag :create, :value => "Create Wizard" %>
+<%= w.submit :create, :value => "Create Wizard" %>
 <% end %>
