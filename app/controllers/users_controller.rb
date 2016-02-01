@@ -33,7 +33,6 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     @current_user = User.find(session[:user_id])
     @wizard = Wizard.all
-    @battle = Wizard.first.battle(Wizard.last, 1)
   end
 
   def new
