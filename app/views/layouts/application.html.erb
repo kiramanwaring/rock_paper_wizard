@@ -10,9 +10,10 @@
 	<div class="nav">
 		<ul>
 			<li><a href="/login">Log In</a></li>
-			<li><a href="users#new">Sign Up</a></li>
-			<li><a href="users#index">All Users</a></li>
-			<li><a href="">New Wizard</a></li>
+			<li><a href="/">Sign Up</a></li>
+			<li><a href="/users">All Users</a></li>
+			<li><a href="wizards/new">New Wizard</a></li>
+			<li><%= link_to "My Profile", user_path(@current_user.id) %></li>
 		</ul>
 	</div>
 <%= yield %>
