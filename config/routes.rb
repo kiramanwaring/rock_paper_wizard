@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'sessions/create' => 'sessions#create', as: :user_login
   get 'login' => 'sessions#new', as: :login
   delete 'sessions/destroy' => 'session#destroy', as: :log_out
+  post 'wizards/new' => 'wizards#new', as: :create
 
   resources :users
   resources :wizards

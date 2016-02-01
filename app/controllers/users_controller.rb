@@ -31,8 +31,9 @@ class UsersController < ApplicationController
   def show
  # set variable to find user by user_id
   	@user = User.find(params[:id])
-    @posts = @user.posts.order(id: :desc)
     @current_user = User.find(session[:user_id])
+    @wizard = Wizard.all
+    @battle = Wizard.first.battle(Wizard.last, 1)
   end
 
   def new
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
 	private
 
   def user_params
-    params.require(:user).permit(:email, :password)   
+    params.require(:user).permit(:email, :password, :user_id)   
 	end
 
 end

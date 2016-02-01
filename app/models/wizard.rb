@@ -4,7 +4,6 @@ class Wizard < ActiveRecord::Base
 
 	before_create :default_values
 	def default_values
-	  # self.user_id = current_user.id
 	  puts "Setting up new wizard"
 	  self.level = 1
 	  self.exp = 0
