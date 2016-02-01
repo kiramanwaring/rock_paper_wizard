@@ -4,7 +4,7 @@ class WizardsController < ApplicationController
   	puts "Testing Creating a Wizard"
   	@wizard = Wizard.new(wizard_params)
   	@user = current_user
-  	@wizard.user_id = @user.id
+  	@user.wizards.push(@wizard)
   	@wizard.save
   end
 
