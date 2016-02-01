@@ -5,7 +5,6 @@ class Wizard < ActiveRecord::Base
 	after_initialize :default_values
 	def default_values
 	  # self.user_id = current_user.id
-	  self.magic_type = rand(2)
 	  self.level = 1
 	  self.exp = 0
 	  self.lives = 3
