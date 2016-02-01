@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create(email: "dungeonmaster@RPSW.com", password: "qwerty")
 
 # these are the only strategies possible in RPSW, here they are sorted by style
 # these strategies rely on using the same move every turn
@@ -32,8 +33,8 @@ Strategy.create(rock: 3, paper: 2, scissors: 1)
 
 
 # these are example wizards for testing, they will eventually be the NPC library
-Wizard.create(name: "Test Wiz 1", magic_type: 0, strategy_id: 1)
-# Wizard.create(name: "Test Wiz 2", magic_type: 0, strategy_id: 2)
-# Wizard.create(name: "Test Wiz 3", magic_type: 1, strategy_id: 3)
-Wizard.create(name: "Test Wiz 4", magic_type: 1, strategy_id: 10)
+Wizard.create(name: "Dark Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 1)
+Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 2, user_id: 1)
+Wizard.create(name: "Dark Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Light Wizard balanced", magic_type: 0, strategy_id: 7, user_id: 1)
 puts "COMPLETE SEED"

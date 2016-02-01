@@ -8,6 +8,13 @@ index
 </h1>
 <% end %>
 
+<% @my_wizards.each do |w| %>
+<h1>
+<%= link_to w.name, wizard_path(w) %>
+</h1>
+<%= User.find(w.user_id).email %>
+<% end %>
+
 <% if @user.id == @current_user.id %>
 <%= link_to "signout", log_out_path %>
 <% end %>
