@@ -8,17 +8,13 @@ index
 </h1>
 <% end %>
 
-<% @my_wizards.each do |w| %>
+<%= content_tag :h1, "Wizards Leaderboard" %>
+
+<% @wizards.each do |w| %>
 <h1>
-<%= link_to w.name, wizard_path(w) %>
+<%= w.name + " at level " + w.level.to_s %>
 </h1>
-<%= User.find(w.user_id).email %>
+<%= "belongs to :" %>
+<%= link_to w.user.email, user_path(w.user) %>
 <% end %>
 
-<% if @user.id == @current_user.id %>
-<%= link_to "signout", log_out_path %>
-<% end %>
-
-<% if @user.id == @current_user.id %>
-<%= link_to("Delete", user_path(@user), method: :delete) %>
-<% end %>
