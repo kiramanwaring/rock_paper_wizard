@@ -1,0 +1,18 @@
+<%= @wizard.name %>
+<%= @wizard.dark_or_light() %>
+<%= content_tag :h3, "Level:" %>
+<%= @wizard.level %>
+<%= content_tag :h3, "Lives:" %>
+<%= @wizard.lives %>
+<%= content_tag :h3, "HP:" %>
+<%= @wizard.hp %>
+<%= content_tag :h3, "Attack:" %>
+<%= @wizard.attack %>
+<%= content_tag :h3, "Defense:" %>
+<%= @wizard.defense %>
+<%= content_tag :h3, "EXP:" %>
+<%= @wizard.exp %>
+<%= content_tag :h3, "belongs to:" %>
+<%= link_to @wizard.user.email, user_path(@wizard.user) %>
+
+<%= render :partial => 'battle', :object => @wizards %>
