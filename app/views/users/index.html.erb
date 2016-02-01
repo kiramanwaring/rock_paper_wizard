@@ -10,7 +10,7 @@ index
 
 <% @my_wizards.each do |w| %>
 <h1>
-<%= w.name %>
+<%= link_to w.name, wizard_path(w) %>
 </h1>
 <%= User.find(w.user_id).email %>
 <% end %>

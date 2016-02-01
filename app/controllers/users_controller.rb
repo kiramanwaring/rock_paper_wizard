@@ -32,11 +32,11 @@ end
 
 def show
  # set variable to find user by user_id
- @user = User.find(params[:id])
- @current_user = User.find(session[:user_id])
- @wizard = Wizard.all
- @battle = Wizard.first.battle(Wizard.last, 1)
-end
+  	@user = User.find(params[:id])
+    @current_user = current_user
+    @wizard = Wizard.all
+  end
+
 
 def new
  # set variable to create a new user

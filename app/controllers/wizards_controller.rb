@@ -15,6 +15,9 @@ class WizardsController < ApplicationController
   	@wizard = Wizard.new
   end
 
+  def show
+  	@wizard = Wizard.find(params[:id])
+  end
   private
 
   def wizard_params
