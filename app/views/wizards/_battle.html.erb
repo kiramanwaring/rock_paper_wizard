@@ -1,8 +1,7 @@
-First buttons
+<!-- First buttons
 <%= button_tag "ROCK", class: "move", id: "rock", name: "#{@wizard}" %>
 <%= button_tag "PAPER", class: "move", id: "paper", name: "#{@wizard}" %>
 <%= button_tag "SCISSORS", class: "move", id: "scissors", name: "#{@wizard}" %>
-
-second buttons
-
-
+ -->
+<%= content_tag :span, "Lives:" %>
+<%= @wizard.lives %>
