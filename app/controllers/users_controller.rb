@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	 @user.save
 	 session[:user_id] = @user.id
 	 # redirect to the newly create user's profile page /show
-	 redirect_to users_path
+	 redirect_to user_path(@user)
 	end
 
 def destroy

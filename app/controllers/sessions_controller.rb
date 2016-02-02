@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 		 @user = User.where(email: params[:email]).first     
 		 if @user and @user.password == params[:password] 
 		 session[:user_id] = @user.id
-		 redirect_to users_path
+		 redirect_to user_path(@user)
 		else
 			redirect_to login_path
 		end
