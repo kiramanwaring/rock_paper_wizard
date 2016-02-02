@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# websockets through Faye
+gem 'faye'
 # Haml to write our views
 gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
