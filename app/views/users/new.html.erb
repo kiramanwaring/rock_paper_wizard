@@ -1,14 +1,29 @@
-<%= content_tag :div, class: 'sign_up_form_img' do -%>
-<%= content_tag :div, class: 'sign_up_form_bg' do -%>
-<div class="sign_up_box">
-<%= form_for @user do |f| %>
-<%= f.text_field :email, :class => 'sign_up_form_top', :placeholder => 'Email' %>
-<%= f.password_field :password, :class => 'sign_up_form', :placeholder => 'Password' %>
-<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
-<%= content_tag :div, class: 'sign_in_button_div' do -%>
-<%= link_to("Log In", '/login', method: :get, :class => 'sign_in_button') %>
-<% end -%>
+<div class="user_new_bg_img">
+	<h1 class="user_new_title_rps">
+		ROCK . PAPER . SCISSORS
+	</h1>
+	<h1 class="user_new_title_wizard">
+		WIZARDS!
+	</h1>
+	<div class="scroll_box">
+		<div class="sign_in_box">
+			<h2 class="user_new_box_title">Sign in</h2>
+			<%= form_tag user_login_path do%>
+			<%= text_field_tag :email, "", :class => 'sign_in_top', :placeholder => "Email" %>
+			<%= password_field_tag :password_digest, "", :class => 'sign_in_bottom', :placeholder => 'Password' %>
+			<%= submit_tag :Sign_In, :value => "Sign In", :class => 'sign_in_button', method: :user_login %>
+			<% end %>
+		</div>
+		<div class="sign_up_box">
+			<h2 class="user_new_box_title">Sign Up</h2>
+				<%= form_for @user do |f| %>
+				<%= f.text_field :email, :class => 'sign_up_form_top form_input', :placeholder => 'Email' %>
+				<%= f.password_field :password, :class => 'sign_up_form_bottom form_input', :placeholder => 'Password' %>
+				<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
+				<% end %>
+				<p>Already a memeber? <a href="#" id="id_link">Login</a></p>
+		</div>		
+	</div>
 </div>
-<% end -%>
-<% end -%>
-<% end %>
+
+
