@@ -8,11 +8,11 @@
 	<div class="scroll_box">
 		<div class="sign_in_box">
 			<h2 class="user_new_box_title">Sign in</h2>
-				<%= form_for user_login_path do |x| %>
-					<%= x.text_field :email, :class => 'sign_in_top', :placeholder => 'Email' %>
-					<%= x.password_field :password_digest, :class => 'sign_in_bottom', :placeholder => "Password" %>
-					<%= x.submit :Sign_In, :class => 'sign_in_button', :value => "Sign In", method: :user_login %>
-				<% end %>
+			<%= form_tag user_login_path do%>
+			<%= text_field_tag :email, "", :class => 'sign_in_top', :placeholder => "Email" %>
+			<%= password_field_tag :password_digest, "", :class => 'sign_in_bottom', :placeholder => 'Password' %>
+			<%= submit_tag :Sign_In, :value => "Sign In", :class => 'sign_in_button', method: :user_login %>
+			<% end %>
 		</div>
 		<div class="sign_up_box">
 			<h2 class="user_new_box_title">Sign Up</h2>
