@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# puma for faye
+gem 'puma'
 # websockets through Faye
 gem 'faye'
 # Haml to write our views

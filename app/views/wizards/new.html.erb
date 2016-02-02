@@ -5,7 +5,8 @@ New Wizard
 <%= w.text_field :name %>
 <%= tag :br %>
 <%= w.label :Magic_Type %>
-<%= w.text_field :magic_type %>
+<%= w.radio_button :magic_type, 0, :checked => true %> Dark Wizard
+<%= w.radio_button :magic_type, 1 %> Light Wizard
 <%= tag :br %>
 
 <%= w.submit :create, :value => "Create Wizard" %>
