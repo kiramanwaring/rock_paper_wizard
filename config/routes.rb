@@ -13,9 +13,7 @@ Rails.application.routes.draw do
   delete 'sessions/destroy' => 'session#destroy', as: :log_out
   post 'wizards/new' => 'wizards#new', as: :create
 
-  resources :users
-  resources :wizards
-  resources :sessions
+  resources :users, :wizards, :sessions
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

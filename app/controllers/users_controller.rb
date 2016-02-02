@@ -17,34 +17,37 @@ class UsersController < ApplicationController
 	 redirect_to user_path(@user)
 	end
 
-def destroy
-	puts "***** TESTING DELETING USER"
-# set variable to find a specific user by user_id
-@user = User.find(params[:id])
-# delete user from database upon clicking link in /show
-@user.destroy
-# end session so the current_user method stops looking for their id
-session[:user_id] = nil
+	def destroy
+		puts "***** TESTING DELETING USER"
+		# set variable to find a specific user by user_id
+		@user = User.find(params[:id])
+		# delete user from database upon clicking link in /show
+		@user.destroy
+		# end session so the current_user method stops looking for their id
+		session[:user_id] = nil
 
-# redirect to /index 
-redirect_to root_path
-end
+		# redirect to /index 
+		redirect_to root_path
+	end
 
-def show
- # set variable to find user by user_id
-  	@user = User.find(params[:id])
-    @current_user = current_user
-    @wizard = Wizard.all
-  end
+	def show
+	 # set variable to find user by user_id
+	 @user = User.find(params[:id])
+	 @current_user = current_user
+	 @wizards = @user.wizards
+	end
 
 
-def new
- # set variable to create a new user
- @user = User.new
-end
-private
+	def new
+	if current_user
+		redirect_to user_path(current_user)
+	end
+	 # set variable to create a new user
+	 @user = User.new
+	end
+	private
 
-def user_params
-	params.require(:user).permit(:email, :password, :user_id)   
-end
+	def user_params
+		params.require(:user).permit(:email, :password, :user_id)   
+	end
 end

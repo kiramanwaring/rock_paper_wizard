@@ -1,13 +1,22 @@
-Show
-<%= tag :br %>
-<%= tag :br %>
-<%= tag :br %>
-<%= tag :br %>
-Battle Page
-<%= tag :br %>
-<%= @user.email %>
-<%= tag :br %>
-<%= tag :br %>
-<%= tag :br %>
-<%= tag :br %>
-<%= @wizard.name %>
+
+<%= "Profile for " + @user.email %>
+
+
+<% @wizards.each do |w| %>
+<h1>
+	<%= link_to w.name, wizard_path() %>
+</h1>
+<%= "A " + w.dark_or_light() %>
+<%= " at level " + w.level.to_s %>
+<% if @user.id == @current_user.id %>
+<%= link_to("Delete Wizard", wizard_path(w), method: :delete) %>
+<% end %>
+
+
+<% end %>
+<div>
+<%= link_to "Signout", log_out_path %>
+<% if @user.id == @current_user.id %>
+<%= link_to("Delete Account", user_path(@user), method: :delete) %>
+<% end %>
+</div>

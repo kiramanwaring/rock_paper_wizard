@@ -54,8 +54,8 @@ class Wizard < ActiveRecord::Base
 	def hp_decriment(opponent)
 		hp_will_change!
 		puts "damage taken!"
-		self.hp -= 1 
-		# self.hp -= (1 + opponent.attack/self.defense)
+		# self.hp -= 1 
+		self.hp -= (1 + opponent.attack/self.defense)
 		if self.hp <=0 
 			puts "You died!"
 			self.lives_decriment()
@@ -90,4 +90,13 @@ class Wizard < ActiveRecord::Base
 			self.save!
 		end
 	end
+	def dark_or_light
+		if magic_type = 0
+			return "Dark Wizard"
+		elsif magic_type = 1
+			return "Light Wizard"
+		else
+			return "Invalid Wizard"
+		end
+	end		
 end
