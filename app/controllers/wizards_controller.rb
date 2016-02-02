@@ -22,7 +22,7 @@ class WizardsController < ApplicationController
   end
   def update
   	@wizard=Wizard.find(params[:id])
-  	@wizard.lives += 1
+  	@wizard.battle(Wizard.first, 1)
   	@wizard.save
   end
 

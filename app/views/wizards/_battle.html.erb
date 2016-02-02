@@ -3,5 +3,8 @@
 <%= button_tag "PAPER", class: "move", id: "paper", name: "#{@wizard}" %>
 <%= button_tag "SCISSORS", class: "move", id: "scissors", name: "#{@wizard}" %>
  -->
-<%= content_tag :span, "Lives:" %>
-<%= @wizard.lives %>
+<%= content_tag :span, "HP:" %>
+<%= @wizard.hp %>
+<%= content_tag :span, "exp:" %>
+<%= @wizard.exp %>
+
