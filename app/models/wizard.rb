@@ -91,9 +91,9 @@ class Wizard < ActiveRecord::Base
 		end
 	end
 	def dark_or_light
-		if magic_type = 0
+		if magic_type == 0
 			return "Dark Wizard"
-		elsif magic_type = 1
+		elsif magic_type == 1
 			return "Light Wizard"
 		else
 			return "Invalid Wizard"

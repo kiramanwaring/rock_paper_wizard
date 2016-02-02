@@ -6,18 +6,21 @@ class WizardsController < ApplicationController
   	@user = current_user
   	@user.wizards.push(@wizard)
   	@wizard.save
+	redirect_to user_path(@user)
   end
 
   def destroy
+  	Wizard.find(params[:id]).destroy
+  	# redirect_to root_path
   end
-
   def new
   	@wizard = Wizard.new
   end
 
   def show
-  	@wizard = Wizard.find(params[:id])
+  	@wizard=Wizard.find(params[:id])
   end
+
   private
 
   def wizard_params

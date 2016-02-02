@@ -33,6 +33,9 @@ class UsersController < ApplicationController
 	def show
 	 # set variable to find user by user_id
 	 @user = User.find(params[:id])
+	 if @user.wizards.count == 0
+	 	redirect_to new_wizard_path
+	 end
 	 @current_user = current_user
 	 @wizards = @user.wizards
 	end
