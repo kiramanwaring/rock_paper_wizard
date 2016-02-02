@@ -7,22 +7,22 @@
 	</h1>
 	<div class="scroll_box">
 		<div class="sign_in_box">
-			<h2>Sign in</h2>
+			<h2 class="user_new_box_title">Sign in</h2>
 				<%= form_for user_login_path do |x| %>
 					<%= x.text_field :email, :class => 'sign_in_top', :placeholder => 'Email' %>
 					<%= x.password_field :password_digest, :class => 'sign_in_bottom', :placeholder => "Password" %>
-					<%= x.submit :Sign_In, :value => "Sign In", method: :user_login %>
+					<%= x.submit :Sign_In, :class => 'sign_in_button', :value => "Sign In", method: :user_login %>
 				<% end %>
 		</div>
-		<h2 class="user_new_box_title">Sign Up</h2>
 		<div class="sign_up_box">
+			<h2 class="user_new_box_title">Sign Up</h2>
 				<%= form_for @user do |f| %>
 				<%= f.text_field :email, :class => 'sign_up_form_top form_input', :placeholder => 'Email' %>
 				<%= f.password_field :password, :class => 'sign_up_form_bottom form_input', :placeholder => 'Password' %>
 				<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
 				<% end %>
-		</div>
-			<p>Already a memeber? <a href="#">Login</a></p>		
+				<p>Already a memeber? <a href="#" id="id_link">Login</a></p>
+		</div>		
 	</div>
 </div>
 
