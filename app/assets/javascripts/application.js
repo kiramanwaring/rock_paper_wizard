@@ -20,7 +20,6 @@
 $(function(){
 	var faye = new Faye.Client('http://localhost:9292/faye');
 	faye.subscribe('/wizard_update', function (data) {
-		alert("HELOO")
-		// alert(data)
+		eval(data)
 	});
 });
