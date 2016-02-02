@@ -1,0 +1,15 @@
+$(document).ready(function () {
+	$(".move").click(function(event) {
+		var move = this.id
+		var wizard = this.name
+		if (move == "rock"){
+			move = 0
+		} else if (move == "paper"){
+			move = 1
+		} else{
+			move = 2
+		}
+		console.log(wizard)
+		console.log(move)
+	})
+})

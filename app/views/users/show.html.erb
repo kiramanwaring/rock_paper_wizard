@@ -2,18 +2,17 @@
 <%= "Profile for " + @user.email %>
 
 
+<table>
 <% @wizards.each do |w| %>
-<h1>
-	<%= link_to w.name, wizard_path() %>
-</h1>
-<%= "A " + w.dark_or_light() %>
-<%= " at level " + w.level.to_s %>
-<% if @user.id == @current_user.id %>
-<%= link_to("Delete Wizard", wizard_path(w), method: :delete) %>
+  <tr>
+    <th><%= link_to w.name, wizard_path(w) %><%= ": a " + w.dark_or_light() + " at level " + w.level.to_s %>
+	<% if @user.id == @current_user.id %>
+		<%= link_to "Delete", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
+	<% end %>
+    </th>
+  </tr>
 <% end %>
-
-
-<% end %>
+</table>
 <div>
 <%= link_to "Signout", log_out_path %>
 <% if @user.id == @current_user.id %>
