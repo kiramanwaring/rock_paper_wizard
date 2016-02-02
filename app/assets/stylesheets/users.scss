@@ -39,7 +39,7 @@ html, body {
 }
 
 .sign_up_box {
-	width: 10vw;
+	width: 12vw;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -54,7 +54,7 @@ html, body {
 	background-color: rgba(255,255,255,0.3);
 	height: 3vw;
 	width: 15.5vw;
-	margin-left: -25%;
+	margin-left: -15%;
 	text-align: center;
 	font-size: 25px;
 	font-family: 'Bubblegum Sans', cursive;
@@ -63,7 +63,7 @@ html, body {
 .sign_up_form_bottom {
 	border: 1px solid #DADADA;
 	background-color: rgba(255,255,255,0.3);
-	margin-left: -25%;
+	margin-left: -15%;
 	height: 3vw;
 	width: 15.5vw;
 	text-align: center;
@@ -105,6 +105,39 @@ html, body {
 	color: #D52B1B;
 }
 
+.sign_in_top {
+	border: 1px solid #DADADA;
+	background-color: rgba(255,255,255,0.3);
+	height: 3vw;
+	width: 15.5vw;
+	margin-left: -25%;
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Bubblegum Sans', cursive;
+}
+
+.sign_in_bottom {
+	border: 1px solid #DADADA;
+	background-color: rgba(255,255,255,0.3);
+	margin-left: -25%;
+	height: 3vw;
+	width: 15.5vw;
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Bubblegum Sans', cursive;
+}
+
 .sign_in_box {
+	width: 10vw;
+	margin: 0 auto;
+	text-align: center;
 	display: none;
+}
+
+.sign_in_button {
+	border: none;
+	background-color: white;
+	font-size: 18px;
+	margin-top: 3px;
+	font-family: 'Bubblegum Sans', cursive;	
 }

@@ -7,16 +7,13 @@
 	</h1>
 	<div class="scroll_box">
 		<div class="sign_in_box">
-			<h2>Sign in</h2>
+			<h2 class="user_new_box_title">Sign in</h2>
 			<%= form_tag user_login_path do%>
-			<%= label_tag :Email %>
-			<%= text_field_tag :email %>
-			<%= label_tag :Password %>
-			<%= password_field_tag :password_digest %>
-			<%= submit_tag :Sign_In, :value => "Sign In", method: :user_login %>
+			<%= text_field_tag :email, "", :class => 'sign_in_top', :placeholder => "Email" %>
+			<%= password_field_tag :password_digest, "", :class => 'sign_in_bottom', :placeholder => 'Password' %>
+			<%= submit_tag :Sign_In, :value => "Sign In", :class => 'sign_in_button', method: :user_login %>
 			<% end %>
 		</div>
-		<h2 class="user_new_box_title">Sign Up</h2>
 		<div class="sign_up_box">
 			<%= form_for @user do |f| %>
 			<%= f.text_field :email, :class => 'sign_up_form_top form_input', :placeholder => 'Email' %>
