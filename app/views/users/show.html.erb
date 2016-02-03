@@ -3,26 +3,26 @@
 
 
 <table>
-<% @wizards.each do |w| %>
-  <tr>
-    <th><%= link_to w.name, wizard_path(w) %><%= ": a " + w.dark_or_light() + " at level " + w.level.to_s %>
-	<% if @user.id == @current_user.id %>
-		<%= link_to "Delete", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
+	<% @wizards.each do |w| %>
+	<tr>
+	<th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " at level " + w.level.to_s %>
+			<% if @user.id == @current_user.id %>
+			<%= link_to "Delete", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
+			<% end %>
+		</th>
+	</tr>
 	<% end %>
-    </th>
-  </tr>
-<% end %>
 </table>
 <div>
-<%= link_to "Signout", log_out_path %>
-<% if @user.id == @current_user.id %>
-<%= link_to("Delete Account", user_path(@user), method: :delete) %>
-<% end %>
+	<%= link_to "Signout", log_out_path %>
+	<% if @user.id == @current_user.id %>
+	<%= link_to("Delete Account", user_path(@user), method: :delete) %>
+	<% end %>
 </div>
 
 <% @all_wizards.each do |w| %>
 <h1>
-<%= w.name + " at level " + w.level.to_s %>
+	<%= w.name + " at level " + w.level.to_s %>
 </h1>
 <%= "belongs to :" %>
 <%= link_to w.user.email, user_path(w.user) %>
