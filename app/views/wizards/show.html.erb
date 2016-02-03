@@ -37,9 +37,7 @@
     </div>
     <div class="users_show_book_right">
       <% @battles.each do |b| %>
-      <h4><%= w.name + " at level " + w.level.to_s %></h4>
-      <%= "belongs to :" %>
-      <%= link_to w.user.email, user_path(w.user) %>
+      <h4><%= Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name %></h4>
       <% end %>
     </div>
   </div>

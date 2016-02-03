@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get 'battles/index'
+  # get 'battles/index'
 
-  get 'battles/create'
+  # get 'battles/create'
 
-  get 'battles/update'
+  # get 'battles/update'
 
-  get 'battles/show'
+  # get 'battles/show'
 
-  get 'battles/create'
+  # get 'battles/create'
 
-  get 'battles/update'
+  # get 'battles/update'
 
   get 'sessions/create'
 
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   post 'wizards/new' => 'wizards#new', as: :create
   get 'opponent/:id' => "sessions#opponent", as: :opponent_session
  
-  resources :users, :wizards, :sessions
+  resources :users, :wizards, :sessions, :battles
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

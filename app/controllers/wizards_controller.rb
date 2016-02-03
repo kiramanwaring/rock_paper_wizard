@@ -21,7 +21,8 @@ class WizardsController < ApplicationController
   	@wizard=Wizard.find(params[:id])
   	# @battle=Battle.new(@wizard)
   	@battles=Battle.where(status: 0, wizard_id: @wizard.id) + Battle.where(status: 0, opponent_wizard_id: @wizard.id)
-  	@opponents= Wizard.where(user_id: 1).order("RANDOM()").first + Wizard.where(user_id: 1).order("RANDOM()").first
+  	# selects 5 random NPC's to fight, we can change this to all wizards later
+  	@opponents= Wizard.where(user_id: 1).order("RANDOM()").first(5)
   end
   def update
   	@opponent=Wizard.find(session[:opponent_id])

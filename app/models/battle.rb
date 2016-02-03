@@ -1,14 +1,14 @@
 class Battle < ActiveRecord::Base
 	has_many :wizards
 	
-	def initialize(wizard, opponent_wizard)
-		puts "initialize battle"
-		@wizard_id=wizard.id
-		@opponent_wizard_id=opponent_wizard.id
-		if opponent_wizard.user_id == 0
-			o_move = Strategy.find(opponent.strategy_id).move()
-		end
-	end
+	# def initialize(wizard, opponent_wizard)
+	# 	puts "initialize battle"
+	# 	@wizard_id=wizard.id
+	# 	@opponent_wizard_id=opponent_wizard.id
+	# 	if opponent_wizard.user_id == 0
+	# 		o_move = Strategy.find(opponent.strategy_id).move()
+	# 	end
+	# end
 	before_create :default_values
 	def default_values
 	  puts "battle status set"
