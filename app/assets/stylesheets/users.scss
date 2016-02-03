@@ -41,6 +41,8 @@ html, body {
 	width: 12vw;
 	margin: 0 auto;
 	text-align: center;
+	height: 22vw;
+	overflow: scroll;
 }
 
 .user_new_box_title {
@@ -56,7 +58,7 @@ html, body {
 	width: 15.5vw;
 	margin-left: -15%;
 	text-align: center;
-	font-size: 25px;
+	font-size: 2.5vw;
 	font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -72,7 +74,7 @@ html, body {
 	height: 3vw;
 	width: 15.5vw;
 	text-align: center;
-	font-size: 25px;
+	font-size: 2.5vw;
 	font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -83,7 +85,7 @@ html, body {
 .sign_up_create_button {
 	border: none;
 	background-color: white;
-	font-size: 18px;
+	font-size: 1.6vw;
 	margin-top: 6px;
 	font-family: 'Bubblegum Sans', cursive;
 }
@@ -118,7 +120,7 @@ html, body {
 	width: 15.5vw;
 	margin-left: -25%;
 	text-align: center;
-	font-size: 25px;
+	font-size: 2.5vw;
 	font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -130,7 +132,7 @@ html, body {
 	height: 3vw;
 	width: 15.5vw;
 	text-align: center;
-	font-size: 25px;
+	font-size: 2.5vw;
 	font-family: 'Bubblegum Sans', cursive;
 }
 input:focus {
@@ -139,6 +141,7 @@ input:focus {
 
 .sign_in_box {
 	width: 10vw;
+	height: 10vw;
 	margin: 0 auto;
 	text-align: center;
 	display: none;
@@ -147,7 +150,7 @@ input:focus {
 .sign_in_button {
 	border: none;
 	background-color: white;
-	font-size: 18px;
+	font-size: 1.8vw;
 	margin-top: 6px;
 	font-family: 'Bubblegum Sans', cursive;	
 }
@@ -200,23 +203,23 @@ input:focus {
 }
 
 .users_show_book_left {
-	padding-top: 3%;
+	margin-top: 3%;
 	padding-left: 10%;
 	display: inline-block;
 	width: 29.5vw;
-	height: 40vw;
+	height: 42vw;
 	overflow: scroll;
 	font-family: 'Courgette', cursive;
 }
 
 .users_show_book_right {
 	position: absolute;
-	padding-top: 2%;
+	margin-top: 2%;
 	display: inline-block;
 	width: 32vw;
-	height: 40vw;
-	overflow: scroll;
-	padding-left: 3%;
+	height: 42vw;
+	overflow: scroll;	
+	margin-left: 3%;
 	font-family: 'Courgette', cursive;
 }
 
@@ -227,6 +230,7 @@ input:focus {
 	background-color: red;
 	border: 3px solid red;
 	border-radius: 5px;
+	font-family: 'Courgette', cursive;
 }
 
 .delete_account:hover {
@@ -246,21 +250,106 @@ input:focus {
 
 .users_show_email {
 	float: left;
+	font-size: 1.5vw;
+	width: 180px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	-ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .users_show_new_wizard {
 	float: right;
+	font-size: 3vw;
+	background-color: #240134;
+	padding: 2px;
+	border-radius: 5px;
+	font-family: 'Bubblegum Sans', cursive;
+}
+
+.users_show_new_wizard a {
+	text-decoration: none;
+	color: white;
+	padding: 0, 10px, 10px, 0;
+}
+
+.users_show_new_wizard a:hover {
+	text-decoration: underline;
 }
 
 .users_show_wizards_table {
-	padding-top: 8%;
+	padding-top: 14%;
 }
 
+.users_show_wizards_table a {
+	text-decoration: none;
+	color: red;
+}
 
+.wizard_name a {
+	color: #240134;
+}
 
+.wizard_name a:hover {
+	text-decoration: underline;
+	color: red;
+}
 
+.users_show_wizards_table th {
+	display: inline-block;
+	padding-bottom: 3%;
+}
 
+.users_show_book_right h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 2vw;
+	display: inline-block;
+}
 
+.users_show_book_right_title {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.users_show_book_right p {
+	margin-bottom: 3%;
+	margin-top: 0;
+	font-size: 1vw;
+}
+
+.users_show_book_right_title p {
+	font-size: 35px;
+}
+
+.small_wiz_icon {
+	background-image: url("8bitdark.png");
+	width: 2vw;
+	height: 2vw;
+	background-size: cover;
+	display: inline-block;
+}
+
+.owners_wizard_email a {
+	text-decoration: none;
+	color: #240134;
+}
+
+.owners_wizard_email a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+.small_own_wiz_icon {
+	background-image: url("8bitlight.png");
+	width: 2vw;
+	height: 2vw;
+	background-size: cover;
+	display: inline-block;
+}
 
 
 
