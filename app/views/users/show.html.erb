@@ -3,39 +3,38 @@
 		<ul>
 			<% if @current_user != nil %>
 			<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
-			<li><%= link_to "My Profile", user_path(@current_user.id)
-			%></li>
+			<li><%= link_to "My Profile", user_path(@current_user.id)%></li>
 			<% end %>
 		</ul>
 	</div>
 	<div class="users_show_book_bg">
 		<div class="users_show_book_left">
-		<div class="users_show_status_block"><span class="users_show_email"><%= @user.email %></span> <span class="users_show_new_wizard"><%= link_to "New Wizard", new_wizard_path %></span>
-	</div>
-		<div class="users_show_wizards_table">
-			<table>
-				<% @wizards.each do |w| %>
-			  	<tr>
-				 		<th><%= link_to w.name, wizard_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %>
-						<% if @user.id == @current_user.id %>
-						<%= link_to "Delete", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
-						<% end %>
-		    		</th>
-			  	</tr>
-				<% end %>
-			</table>
-		</div>	
+			<div class="users_show_status_block"><span class="users_show_email"><%= @user.email %></span> <span class="users_show_new_wizard"><%= link_to "New Wizard", new_wizard_path %></span>
+			</div>
+			<div class="users_show_wizards_table">
+				<table>
+					<% @wizards.each do |w| %>
+					<tr>
+						<th><%= link_to w.name, wizard_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %>
+							<% if @user.id == @current_user.id %>
+								<%= link_to "Delete", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
+							<% end %>
+						</th>
+					</tr>
+					<% end %>
+				</table>
+			</div>	
 		</div>
 		<div class="users_show_book_right">
 			<% @all_wizards.each do |w| %>
-				<h4><%= w.name + " at level " + w.level.to_s %></h4>
-				<%= "belongs to :" %>
-				<%= link_to w.user.email, user_path(w.user) %>
+			<h4><%= w.name + " at level " + w.level.to_s %></h4>
+			<%= "belongs to :" %>
+			<%= link_to w.user.email, user_path(w.user) %>
 			<% end %>
 		</div>
 	</div>
 	<% if @user.id == @current_user.id %>
 	<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
-	<% end %>
+		<% end %>
 	</div>
 </div>

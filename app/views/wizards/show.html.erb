@@ -1,4 +1,4 @@
-<!-- YOU
+ YOU
 <table>
   <tr>
     <th><%= @wizard.name %></th>
@@ -6,65 +6,40 @@
   </tr>
   <tr>
     <td><%= content_tag :span, "Level:" %></td>
-	<td><%= @wizard.level %></td> 
-  </tr>
-  <tr>
     <td><%= content_tag :span, "Lives:" %></td>
-	<td><%= @wizard.lives %></td> 
-  </tr>
-    <tr>
     <td><%= content_tag :span, "HP:" %></td>
-	<td><%= @wizard.hp %></td> 
-  </tr>
-  <tr>
     <td><%= content_tag :span, "Attack:" %></td>
-	<td><%= @wizard.attack %></td> 
-  </tr>
-  <tr>
     <td><%= content_tag :span, "Defense:" %></td>
-	<td><%= @wizard.defense %></td> 
-  </tr>
-  <tr>
     <td><%= content_tag :span, "Belongs to User:" %></td>
-	<td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
-  </tr>
-</table>
-OPPONENT
-<table>
-  <tr>
-    <th><%= @opponent.name %></th>
-    <th><%= @opponent.dark_or_light() %></th>
   </tr>
   <tr>
-    <td><%= content_tag :span, "Level:" %></td>
-  <td><%= @opponent.level %></td> 
+    <td><%= @wizard.level %></td> 
+    <td><%= @wizard.lives %></td> 
+    <td><%= @wizard.hp %></td> 
+    <td><%= @wizard.attack %></td> 
+    <td><%= @wizard.defense %></td> 
+	  <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
   </tr>
-  <tr>
-    <td><%= content_tag :span, "Lives:" %></td>
-  <td><%= @opponent.lives %></td> 
-  </tr>
-    <tr>
-    <td><%= content_tag :span, "HP:" %></td>
-  <td><%= @opponent.hp %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Attack:" %></td>
-  <td><%= @opponent.attack %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Defense:" %></td>
-  <td><%= @opponent.defense %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Belongs to User:" %></td>
-  <td><%= link_to @opponent.user.email, user_path(@opponent.user) %></td> 
-  </tr>
-</table>
- -->
-<%= link_to "BATTLE!", wizard_path(@wizard), method: :put, remote: true %>
+</table> 
 
-<%= content_tag :div, id: "battle" do -%>
-<%= render :partial => 'battle', :object => @wizards %>
-<% end %>
-
-<%= link_to "Run Away!", opponent_session_path(@wizard) %>
+  <div class="users_show_book_bg">
+    <div class="users_show_book_left">
+      <!-- <div class="users_show_status_block"></div> -->
+      <div class="users_show_wizards_table">
+        <table>
+          <% @opponents.each do |w| %>
+          <tr>
+            <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
+          </tr>
+          <% end %>
+        </table>
+      </div>  
+    </div>
+    <div class="users_show_book_right">
+      <% @battles.each do |b| %>
+      <h4><%= w.name + " at level " + w.level.to_s %></h4>
+      <%= "belongs to :" %>
+      <%= link_to w.user.email, user_path(w.user) %>
+      <% end %>
+    </div>
+  </div>

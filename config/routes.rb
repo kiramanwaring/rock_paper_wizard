@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'battles/index'
+
+  get 'battles/create'
+
+  get 'battles/update'
+
+  get 'battles/show'
+
+  get 'battles/create'
+
+  get 'battles/update'
+
   get 'sessions/create'
 
   get 'sessions/destroy'

@@ -19,7 +19,9 @@ class WizardsController < ApplicationController
 
   def show
   	@wizard=Wizard.find(params[:id])
-  	@opponent=Wizard.find(session[:opponent_id])
+  	# @battle=Battle.new(@wizard)
+  	@battles=Battle.where(status: 0, wizard_id: @wizard.id) + Battle.where(status: 0, opponent_wizard_id: @wizard.id)
+  	@opponents= Wizard.where(user_id: 1).order("RANDOM()").first + Wizard.where(user_id: 1).order("RANDOM()").first
   end
   def update
   	@opponent=Wizard.find(session[:opponent_id])
@@ -27,7 +29,7 @@ class WizardsController < ApplicationController
   	if @opponent.lives == 0
   		redirect_to opponent_session_path(@wizard)
   	end
-  	@wizard.battle(Wizard.find(session[:opponent_id]), 1)
+  	# @wizard.battle(Wizard.find(session[:opponent_id]), 1)
   	@wizard.save
   end
 
