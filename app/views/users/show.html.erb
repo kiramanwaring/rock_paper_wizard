@@ -17,7 +17,7 @@
 				<% @wizards.each do |w| %>
 			  	<tr>
 				 		<th>
-				 		<div class="small_own_wiz_icon">
+				 		<div class="small_wiz_icon">
 				 		</div>
 				 		<span class="wizard_name"><%= link_to w.name, wizard_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
 						<% if @user.id == @current_user.id %>
