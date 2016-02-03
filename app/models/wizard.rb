@@ -85,7 +85,7 @@ class Wizard < ActiveRecord::Base
 		if self.exp >= self.level
 			self.exp -= self.level
 			self.level += 1
-			self.hp += (self.level+5)/2
+			self.hp += (self.level+5-self.hp)/2
 			self.level_increment()
 			self.save!
 		end

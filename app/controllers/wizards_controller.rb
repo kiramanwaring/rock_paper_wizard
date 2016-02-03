@@ -20,6 +20,11 @@ class WizardsController < ApplicationController
   def show
   	@wizard=Wizard.find(params[:id])
   end
+  def update
+  	@wizard=Wizard.find(params[:id])
+  	@wizard.battle(Wizard.first, 1)
+  	@wizard.save
+  end
 
   private
 
