@@ -21,4 +21,11 @@ class SessionsController < ApplicationController
   def new
     @user = User.new
   end
+  def opponent
+  	@wizard=Wizard.find(params[:id])
+  	@opponent=Wizard.where(user_id: 1).order("RANDOM()").first
+  	session[:opponent_id]=@opponent.id
+  	puts "OPPONENT SET"
+  	redirect_to wizard_path(@wizard)
+  end
 end
