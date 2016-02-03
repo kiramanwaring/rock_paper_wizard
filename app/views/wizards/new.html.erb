@@ -1,16 +1,28 @@
-New Wizard
-<%= tag :br %>
-<%= form_for @wizard do |w|%>
-<%= w.label :Name %>
-<%= w.text_field :name %>
-<%= tag :br %>
-<%= w.label :Magic_Type %>
-<%= w.radio_button :magic_type, 0, :checked => true %> Dark Wizard
-<%= w.radio_button :magic_type, 1 %> Light Wizard
-<%= tag :br %>
-
-<%= w.submit :create, :value => "Create Wizard" %>
-<% end %>
-
-
-<%= link_to "Signout", log_out_path %>
+<div class="wizards_new_bg_img">
+	<div class="nav">
+		<ul>
+			<% if @current_user != nil %>
+			<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+			<li><%= link_to "My Profile", user_path(@current_user.id)
+			%></li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="wizards_new_scroll">
+		<h4>New Wizard</h4>
+		<%= form_for @wizard do |w|%>
+		<div class="new_wizard_name">
+			<%= w.text_field :name, :placeholder => "Wizard Name" %>
+		</div>
+		<div class="select_magic_type">
+			<p>Select Magic Type</p>
+		</div>
+		<div class="wizards_new_radio_buttons">
+			<%= w.radio_button :magic_type, 0, :checked => true %> <div class="small_wiz_icon_dark_big">
+			</div>
+			<%= w.radio_button :magic_type, 1 %> <div class="small_wiz_icon_light_big"></div>
+		</div>
+		<%= w.submit :create, :class => "create_wizard_button", :value => "Create Wizard" %>
+		<% end %>
+	</div>
+</div>

@@ -1,3 +1,73 @@
 // Place all the styles related to the Wizards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.wizards_new_bg_img {
+	background-image: url(http://orig01.deviantart.net/0cb3/f/2012/331/c/e/wizard_s_tower_by_jcbarquet-d5mc33w.jpg);
+	background-size: cover;
+	overflow: none;
+	z-index: 0;
+	height: 100%;
+}
+
+.wizards_new_scroll {
+	background-image: url(http://vignette3.wikia.nocookie.net/tesfanon/images/2/2e/Scroll_opened.png/revision/latest?cb=20120116144947);
+	background-size: cover;
+	height: 30vw;
+	width: 30vw;
+	text-align: center;
+	margin-left: 11vw;
+	margin-top: 4vw;
+}
+
+.new_wizard_name input {
+	background-color: rgba(255,255,255,0.0);
+	border: none;
+	border-bottom: 2px solid #DADADA;
+	text-align: center;
+	font-size: 2vw;
+	font-family: 'Bubblegum Sans', cursive;	
+}
+
+.create_wizard_button {
+	border: none;
+	background-color: white;
+	font-size: 1.8vw;
+	margin-top: 6px;
+	font-family: 'Bubblegum Sans', cursive;
+	border-radius: 5px;	
+}
+
+.wizards_new_scroll h4 {
+	font-family: 'Bangers', cusrive;
+	font-size: 4vw;
+	padding: 0;
+	margin: 0;
+	padding-top: 6vw;
+}
+
+.select_magic_type {
+	font-family: 'Bubblegum Sans', cursive;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
