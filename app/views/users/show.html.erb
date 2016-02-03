@@ -19,3 +19,11 @@
 <%= link_to("Delete Account", user_path(@user), method: :delete) %>
 <% end %>
 </div>
+
+<% @all_wizards.each do |w| %>
+<h1>
+<%= w.name + " at level " + w.level.to_s %>
+</h1>
+<%= "belongs to :" %>
+<%= link_to w.user.email, user_path(w.user) %>
+<% end %>

@@ -38,6 +38,7 @@ class UsersController < ApplicationController
 	 end
 	 @current_user = current_user
 	 @wizards = @user.wizards
+	 @all_wizards = Wizard.order('wizards.level DESC')
 	end
 
 
