@@ -1,3 +1,4 @@
+<!-- YOU
 <table>
   <tr>
     <th><%= @wizard.name %></th>
@@ -28,8 +29,42 @@
 	<td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
   </tr>
 </table>
-
+OPPONENT
+<table>
+  <tr>
+    <th><%= @opponent.name %></th>
+    <th><%= @opponent.dark_or_light() %></th>
+  </tr>
+  <tr>
+    <td><%= content_tag :span, "Level:" %></td>
+  <td><%= @opponent.level %></td> 
+  </tr>
+  <tr>
+    <td><%= content_tag :span, "Lives:" %></td>
+  <td><%= @opponent.lives %></td> 
+  </tr>
+    <tr>
+    <td><%= content_tag :span, "HP:" %></td>
+  <td><%= @opponent.hp %></td> 
+  </tr>
+  <tr>
+    <td><%= content_tag :span, "Attack:" %></td>
+  <td><%= @opponent.attack %></td> 
+  </tr>
+  <tr>
+    <td><%= content_tag :span, "Defense:" %></td>
+  <td><%= @opponent.defense %></td> 
+  </tr>
+  <tr>
+    <td><%= content_tag :span, "Belongs to User:" %></td>
+  <td><%= link_to @opponent.user.email, user_path(@opponent.user) %></td> 
+  </tr>
+</table>
+ -->
 <%= link_to "increment", wizard_path(@wizard), method: :put, remote: true %>
+
 <%= content_tag :div, id: "battle" do -%>
 <%= render :partial => 'battle', :object => @wizards %>
 <% end %>
+
+<%= link_to "Run Away!", opponent_session_path(@wizard) %>

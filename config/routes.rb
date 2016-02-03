@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   root 'users#new'
   post 'sessions/create' => 'sessions#create', as: :user_login
   get 'login' => 'sessions#new', as: :login
-  delete 'sessions/destroy' => 'session#destroy', as: :log_out
+  delete 'sessions/destroy' => 'sessions#destroy', as: :log_out
   post 'wizards/new' => 'wizards#new', as: :create
-
+  get 'opponent/:id' => "sessions#opponent", as: :opponent_session
+ 
   resources :users, :wizards, :sessions
 
   # Example of regular route:

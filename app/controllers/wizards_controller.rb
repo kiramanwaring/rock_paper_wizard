@@ -19,10 +19,12 @@ class WizardsController < ApplicationController
 
   def show
   	@wizard=Wizard.find(params[:id])
+  	@opponent=Wizard.find(session[:opponent_id])
   end
   def update
+  	@opponent=Wizard.find(session[:opponent_id])
   	@wizard=Wizard.find(params[:id])
-  	@wizard.battle(Wizard.first, 1)
+  	@wizard.battle(Wizard.find(session[:opponent_id]), 1)
   	@wizard.save
   end
 
