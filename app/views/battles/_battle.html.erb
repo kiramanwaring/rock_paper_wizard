@@ -1,8 +1,3 @@
-<!-- First buttons
-<%= button_tag "ROCK", class: "move", id: "rock", name: "#{@wizard}" %>
-<%= button_tag "PAPER", class: "move", id: "paper", name: "#{@wizard}" %>
-<%= button_tag "SCISSORS", class: "move", id: "scissors", name: "#{@wizard}" %>
- -->
 YOU
 <table>
   <tr>
@@ -11,31 +6,33 @@ YOU
   </tr>
   <tr>
     <td><%= content_tag :span, "Level:" %></td>
-	<td><%= @wizard.level %></td> 
+  <td><%= @wizard.level %></td> 
   </tr>
   <tr>
     <td><%= content_tag :span, "Lives:" %></td>
-	<td><%= @wizard.lives %></td> 
+  <td><%= @wizard.lives %></td> 
   </tr>
     <tr>
     <td><%= content_tag :span, "HP:" %></td>
-	<td><%= @wizard.hp %></td> 
+  <td><%= @wizard.hp %></td> 
   </tr>
   <tr>
     <td><%= content_tag :span, "Attack:" %></td>
-	<td><%= @wizard.attack %></td> 
+  <td><%= @wizard.attack %></td> 
   </tr>
   <tr>
     <td><%= content_tag :span, "Defense:" %></td>
-	<td><%= @wizard.defense %></td> 
+  <td><%= @wizard.defense %></td> 
   </tr>
   <tr>
     <td><%= content_tag :span, "Belongs to User:" %></td>
-	<td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
+  <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
   </tr>
 </table>
-OPPONENT
-<table>
+
+
+
+<table id="opponent">
   <tr>
     <th><%= @opponent.name %></th>
     <th><%= @opponent.dark_or_light() %></th>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wizard_id: 1
+  opponent_wizard_id: 1
+  w_move: 1
+  o_move: MyString
+  status: 1
+  winner: 1
+
+two:
+  wizard_id: 1
+  opponent_wizard_id: 1
+  w_move: 1
+  o_move: MyString
+  status: 1
+  winner: 1

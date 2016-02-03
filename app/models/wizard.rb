@@ -1,6 +1,10 @@
 class Wizard < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :strategy
+	has_many :battles
+	has_many :opponent_wizards, through: :battles
+	# state machine for results
+	OUTCOME=["Battle Not Fought", "You won!", "Draw!", "You lost!"]
 
 	before_create :default_values
 	def default_values
@@ -12,42 +16,42 @@ class Wizard < ActiveRecord::Base
 	  self.attack = 1 + rand(2)
 	  self.defense = 3 - self.attack
 	end
-	def battle(opponent, player_move)
-		# determine the oponents move
-		opponent_move = Strategy.find(opponent.strategy_id).move()
+	def battle(opponent, w_move, o_move)
 		# determine the battle type
 		matchup = self.magic_type - opponent.magic_type
 
 		# stuff to make type differences work
 		if matchup == 1
 			puts "light attacking"
-			if player_move == 0
-				player_move = 2
-			elsif player_move == 2
-				player_move = 0
+			if w_move == 0
+				w_move = 2
+			elsif w_move == 2
+				w_move = 0
 			end	
 		elsif matchup == -1
 			puts "dark attacking"
-			 if opponent_move == 0
-				opponent_move = 2
-			elsif opponent_move == 2
-				opponent_move = 0
+			 if o_move == 0
+				o_move = 2
+			elsif o_move == 2
+				o_move = 0
 			end
 		else
 			puts "same types"	
 		end
-		if player_move > opponent_move || player_move == (opponent_move-2)
-			outcome = "You won!"
+		# acual battle decision mechanism
+		if w_move > o_move || w_move == (o_move-2)
+			outcome = 1
 			self.exp_increment(opponent)
 			opponent.hp_decriment(self)
-		elsif player_move == opponent_move
-			outcome = "Draw!"
+		elsif w_move == o_move
+			outcome = 2
 		else
-			outcome = "You lost!"
+			outcome = 3
 			self.hp_decriment(opponent)
+			opponent.exp_increment(self)
 		end
 		# self.save!	
-		puts outcome
+		puts OUTCOME[outcome]
 		return outcome
 	end
 	# a function that will be called during the battle which decreases the hp of the user
@@ -57,7 +61,7 @@ class Wizard < ActiveRecord::Base
 		# self.hp -= 1 
 		self.hp -= (1 + opponent.attack/self.defense)
 		if self.hp <=0 
-			puts "You died!"
+			puts "Fatality!"
 			self.lives_decriment()
 		end
 		self.save!
@@ -69,7 +73,7 @@ class Wizard < ActiveRecord::Base
 		self.hp = self.level+5
 		self.save!
 		if self.lives <=0 
-			puts "Game Over!"
+			puts "Game Over for #{self.name}!"
 			self.destroy()
 		end
 	end
@@ -81,11 +85,14 @@ class Wizard < ActiveRecord::Base
 		self.save!
 	end
 	def level_increment
-		lives_will_change!
+		level_will_change!
 		if self.exp >= self.level
 			self.exp -= self.level
 			self.level += 1
 			self.hp += (self.level+5-self.hp)/2
+			self.attack += rand(1..2)
+			self.defense += rand(1..2)
+			self.level += rand(2)
 			self.level_increment()
 			self.save!
 		end

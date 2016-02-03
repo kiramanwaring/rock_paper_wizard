@@ -21,6 +21,9 @@ class SessionsController < ApplicationController
   def new
     @user = User.new
   end
+  def wizard
+  	
+  end
   def opponent
   	@wizard=Wizard.find(params[:id])
   	@opponent=Wizard.where(user_id: 1).order("RANDOM()").first

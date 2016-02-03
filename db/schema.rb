@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131204549) do
+ActiveRecord::Schema.define(version: 20160203160822) do
+
+  create_table "battles", force: :cascade do |t|
+    t.integer  "wizard_id"
+    t.integer  "opponent_wizard_id"
+    t.integer  "w_move"
+    t.string   "o_move"
+    t.integer  "status"
+    t.integer  "winner"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "strategies", force: :cascade do |t|
     t.integer  "rock"
