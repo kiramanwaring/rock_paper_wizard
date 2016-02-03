@@ -88,6 +88,7 @@ html, body {
 	font-size: 1.6vw;
 	margin-top: 6px;
 	font-family: 'Bubblegum Sans', cursive;
+	border-radius: 5px;
 }
 
 .scroll_box {
@@ -153,6 +154,7 @@ input:focus {
 	font-size: 1.8vw;
 	margin-top: 6px;
 	font-family: 'Bubblegum Sans', cursive;	
+	border-radius: 5px;
 }
 
 .users_show_bg_img {
@@ -181,12 +183,14 @@ input:focus {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 3vh;
-	font-family: 'Bubblegum Sans', cursive;
+		font-family: 'Bubblegum Sans', cursive;
+		text-shadow: 2px 2px black;
 }
 
 .nav li a:hover {
     background-color: #FBFFA9;
     color: black;
+    text-shadow: none;
 }
 
 .sign_out_button {
@@ -250,15 +254,12 @@ input:focus {
 
 .users_show_email {
 	float: left;
-	font-size: 1.5vw;
+	font-size: 1.1vw;
 	width: 180px;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	word-break: break-word;
-	-ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+	margin-top: 1.3vw;
 }
 
 .users_show_new_wizard {
@@ -325,12 +326,36 @@ input:focus {
 	font-size: 35px;
 }
 
-.small_wiz_icon {
+.small_wiz_icon_dark {
 	background-image: url("8bitdark.png");
 	width: 2vw;
 	height: 2vw;
 	background-size: cover;
 	display: inline-block;
+}
+
+.small_wiz_icon_dark_big {
+	background-image: url("8bitdark.png");
+	width: 4vw;
+	height: 4vw;
+	background-size: cover;
+	display: inline-block;
+}
+
+.small_wiz_icon_light_big {
+	background-image: url("8bitlight.png");
+	width: 4vw;
+	height: 4vw;
+	background-size: cover;
+	display: inline-block;
+}
+
+.small_wiz_icon_light {
+	width: 2vw;
+	height: 2vw;
+	background-size: cover;
+	display: inline-block;
+	background-image: url("8bitlight.png");
 }
 
 .owners_wizard_email a {
@@ -343,13 +368,6 @@ input:focus {
 	color: red;
 }
 
-.small_own_wiz_icon {
-	background-image: url("8bitlight.png");
-	width: 2vw;
-	height: 2vw;
-	background-size: cover;
-	display: inline-block;
-}
 
 
 
