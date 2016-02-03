@@ -24,6 +24,9 @@ class WizardsController < ApplicationController
   def update
   	@opponent=Wizard.find(session[:opponent_id])
   	@wizard=Wizard.find(params[:id])
+  	if @opponent.lives == 0
+  		redirect_to opponent_session_path(@wizard)
+  	end
   	@wizard.battle(Wizard.find(session[:opponent_id]), 1)
   	@wizard.save
   end
