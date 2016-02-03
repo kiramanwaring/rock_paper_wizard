@@ -6,17 +6,10 @@
   <%= javascript_include_tag 'application', 'http://localhost:9292/faye.js', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Bangers|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="nav">
-		<ul>
-			<% if @current_user != nil %>
-			<li><%= link_to "All users", users_path %></li>
-			<li><%= link_to "New Wizard", new_wizard_path %></li>
-			<li><%= link_to "My Profile", user_path(@current_user.id) %></li>
-			<% end %>
-		</ul>
-	</div>
+
 <%= yield %>
 
 </body>
