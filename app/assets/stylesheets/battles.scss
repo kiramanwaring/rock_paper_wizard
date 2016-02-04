@@ -1,3 +1,162 @@
 // Place all the styles related to the battles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.battles_show_bg_img {
+	background-image: url(http://www.worldofmiscrits.com/backgrounds/BGBig-Arena.jpg);
+	background-size: cover;
+	overflow: hidden;
+	height: 100%;
+}
+
+.battles_show_move_buttons_run {
+	text-align: center;	
+	margin-top: 2%;
+}
+
+.battles_show_move_buttons_run button {
+	background-image: url(http://vignette3.wikia.nocookie.net/tesfanon/images/2/2e/Scroll_opened.png/revision/latest?cb=20120116144947);
+	background-size: cover;
+	border:none;
+	overflow: none;
+	background-color: rgba(0,0,0,0.0);
+	height: 9vw;
+	width: 9vw;
+}
+
+.battles_show_move_buttons_run button img {
+	height: 6vw;
+	width: 6vw;
+}
+
+.battles_show_wizard {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	font-family: 'Courgette', cursive;
+	padding: 1vw;
+	background-color: rgba(255,255,255,0.75);
+	border-top: 3px solid black;
+	border-right: 3px solid black;
+}
+
+.battles_show_battle {
+	border: 5px solid white;
+	background-color: white;
+	text-align: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 10vw;
+}
+
+.battles_show_opponent th {
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	padding: 4px;
+}
+
+.battles_show_opponent td {
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	text-align: center;
+}
+
+.battles_show_wizard th {
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	padding: 4px;
+	text-align: center;
+}
+
+.battles_show_light_left {
+	background-image: url("8bitlightopposite.png");
+	background-size: cover;
+	background-repeat: no-repate;
+	height: 100%;
+}
+
+.battles_show_dark_left {
+	background-image: url("8bitdark.png");
+	background-size: cover;
+	background-repeat: no-repate;
+	height: 100%;
+}
+
+.battles_show_sprite_left {
+	height: 9vw;
+	width: 6vw;
+	position: absolute;
+	left: 38.8vw;
+	bottom: 3.4vw;
+}
+
+.battles_show_sprite_right {
+	height: 9vw;
+	width: 6vw;
+	position: absolute;
+	right: 38.8vw;
+	bottom: 3.4vw;
+}
+
+.battles_show_fight_cloud {
+	height: 26vw;
+	width: 30vw;
+	position: absolute;
+	left: 50vw;
+	transform: translateX(-50%);
+	bottom: 3.4vw;
+	display: none;
+}
+
+.battles_show_fight_cloud_img {
+	background-image: url(fightcloud.png);
+	background-size: cover;
+	height: 100%;
+}
+
+.battles_show_dark_right {
+	background-image: url("8bitdarkopposite.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;	
+}
+
+.battles_show_wizard td {
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	text-align: center;
+}
+
+.battles_show_light_right {
+	background-image: url("8bitlight.png");
+	background-size: cover;
+	background-repeat: no-repate;
+	height: 100%;	
+}
+
+.battles_show_opponent {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+	font-family: 'Courgette', cursive;
+	padding: 1vw;
+	background-color: rgba(255,255,255,0.75);
+	border-top: 3px solid black;
+	border-left: 3px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

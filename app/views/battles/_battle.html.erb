@@ -1,90 +1,91 @@
-<table id="wizard">
-  <tr>
-    <th><%= @wizard.name %></th>
-    <th><%= @wizard.dark_or_light() %></th>
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Level:" %></td>
-  <td><%= @wizard.level %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Lives:" %></td>
-  <td><%= @wizard.lives %></td> 
-  </tr>
+<!-- -----------------------------------------------------------     ------------------ BATTLE ---------------------------------     ----------------------------------------------------------- -->
+<div id="battle_status" class="battles_show_battle">
+  <table id="battle">
     <tr>
-    <td><%= content_tag :span, "HP:" %></td>
-  <td><%= @wizard.hp %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Attack:" %></td>
-  <td><%= @wizard.attack %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Defense:" %></td>
-  <td><%= @wizard.defense %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Belongs to User:" %></td>
-  <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
-  </tr>
-</table>
-<div id="battle_status">
-<table id="battle">
-  <tr>
-    <td><%= content_tag :span, "w_move:" %></td>
-  <td><%= @battle.w_move %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "o_move:" %></td>
-  <td><%= @battle.o_move %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "status:" %></td>
-    <td><%= @battle.status %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "winner:" %></td>
-    <td><%= @battle.winner %></td> 
-  </tr>  
-</table>
+      <td><%= content_tag :span, "w_move:" %></td>
+      <td><%= @battle.w_move %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "o_move:" %></td>
+      <td><%= @battle.o_move %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "status:" %></td>
+      <td><%= @battle.status %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "winner:" %></td>
+      <td><%= @battle.winner %></td> 
+    </tr>  
+  </table>
 </div>
 
-
-
-
-
-
-
-
-<table id="opponent">
-  <tr>
-    <th><%= @opponent.name %></th>
-    <th><%= @opponent.dark_or_light() %></th>
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Level:" %></td>
-  <td><%= @opponent.level %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Lives:" %></td>
-  <td><%= @opponent.lives %></td> 
-  </tr>
+<!-- -----------------------------------------------------------     ------------------ WIZARD ---------------------------------     ----------------------------------------------------------- -->
+<div class="battles_show_wizard">
+  <table id="wizard">
     <tr>
-    <td><%= content_tag :span, "HP:" %></td>
-  <td><%= @opponent.hp %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Attack:" %></td>
-  <td><%= @opponent.attack %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Defense:" %></td>
-  <td><%= @opponent.defense %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Belongs to User:" %></td>
-  <td><%= link_to @opponent.user.email, user_path(@opponent.user) %></td> 
-  </tr>
-</table>
+      <th><%= @wizard.name %></th>
+      <th><%= @wizard.dark_or_light() %></th>
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Level:" %></td>
+      <td><%= @wizard.level %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Lives:" %></td>
+      <td><%= @wizard.lives %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "HP:" %></td>
+      <td><%= @wizard.hp %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Attack:" %></td>
+      <td><%= @wizard.attack %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Defense:" %></td>
+      <td><%= @wizard.defense %></td> 
+    </tr>
+<!--     <tr>
+      <td><%= content_tag :span, "Belongs to User:" %></td>
+      <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
+    </tr> -->
+  </table>
+</div>
+
+<!-- -----------------------------------------------------------     ------------------ OPPONENT -------------------------------     ----------------------------------------------------------- -->
+<div class="battles_show_opponent">
+  <table id="opponent">
+    <tr>
+      <th><%= @opponent.name %></th>
+      <th><%= @opponent.dark_or_light() %></th>
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Level:" %></td>
+      <td><%= @opponent.level %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Lives:" %></td>
+      <td><%= @opponent.lives %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "HP:" %></td>
+      <td><%= @opponent.hp %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Attack:" %></td>
+      <td><%= @opponent.attack %></td> 
+    </tr>
+    <tr>
+      <td><%= content_tag :span, "Defense:" %></td>
+      <td><%= @opponent.defense %></td> 
+    </tr>
+<!--     <tr>
+      <td><%= content_tag :span, "Belongs to User:" %></td>
+      <td><%= link_to @opponent.user.email, user_path(@opponent.user) %></td> 
+    </tr> -->
+  </table>
+</div>
 
 

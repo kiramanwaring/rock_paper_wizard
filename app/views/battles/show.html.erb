@@ -1,12 +1,32 @@
-<div id="moves">
-<%= link_to '<button type="button">Rock</button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
-<%= link_to '<button type="button">Paper</button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
-<%= link_to '<button type="button">Scissors</button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
+<div class="battles_show_bg_img">
+	<div id="moves" class="battles_show_move_buttons_run">
+		<%= link_to '<button class="button_to_hide" type="button"><img src="http://clipartion.com/wp-content/uploads/2015/11/cartoon-rock-clip-art-clipart-free-clipart.png"></button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
+		<%= link_to '<button class="button_to_hide" type="button"><img src="http://cliparts.co/cliparts/6cr/6x4/6cr6x4RLi.png"></button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
+		<%= link_to '<button class="button_to_hide" type="button"><img src="http://www.clker.com/cliparts/w/S/f/1/d/p/scissor-md.png"></button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
+		<%= link_to '<button type="button"><img src="http://www.clker.com/cliparts/n/c/D/4/F/m/run-md.png"></button>'.html_safe, root_path %>
+	</div>
+	<%= content_tag :div, id: "battle" do -%>
+	<%= render :partial => 'battle', :object => @wizards %>
+	<% end %>
+	<div class="battles_show_sprite_left">
+		<% if @wizard.magic_type == 1 %>
+		<div class="battles_show_light_left">
+		</div>
+		<% else %>
+		<div class="battles_show_dark_left">
+		</div>
+		<% end %>
+	</div>
+	<div class="battles_show_sprite_right">
+		<% if @opponent.magic_type == 1 %>
+		<div class="battles_show_light_right">
+		</div>
+		<% else %>
+		<div class="battles_show_dark_right">
+		</div>
+		<% end %>
+	</div>
+	<div class="battles_show_fight_cloud">
+		<div class="battles_show_fight_cloud_img"></div>
+	</div>
 </div>
-<%= link_to '<button type="button">Run away!</button>'.html_safe, root_path %>
-
-
-<%= content_tag :div, id: "battle" do -%>
-<%= render :partial => 'battle', :object => @wizards %>
-<% end %>
-
