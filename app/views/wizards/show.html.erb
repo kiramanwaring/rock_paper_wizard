@@ -8,7 +8,25 @@
       <% end %>
     </ul>
   </div>
-  <div class="users_show_wizard_stats_table">
+  <div class="wizards_show_book_bg">
+    <div class="wizards_show_book_left">
+      <div class="wizards_show_wizards_table">
+        <table>
+          <% @opponents.each do |w| %>
+          <tr>
+            <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
+          </tr>
+          <% end %>
+        </table>
+      </div>  
+    </div>
+    <div class="wizards_show_book_right">
+      <% @battles.each do |b| %>
+      <h4><%= link_to Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name, battle_path(b) %></h4>
+    <% end %>
+    </div>
+  </div>
+    <div class="users_show_wizard_stats_table">
     <table>
       <tr>
         <td style="font-size: 22px"><%= content_tag :span, "Selected Wizard:" %></td>
@@ -29,23 +47,5 @@
         <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
       </tr>
     </table> 
-  </div>
-  <div class="wizards_show_book_bg">
-    <div class="wizards_show_book_left">
-      <div class="wizards_show_wizards_table">
-        <table>
-          <% @opponents.each do |w| %>
-          <tr>
-            <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
-          </tr>
-          <% end %>
-        </table>
-      </div>  
-    </div>
-    <div class="wizards_show_book_right">
-      <% @battles.each do |b| %>
-      <h4><%= link_to Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name, battle_path(b) %></h4>
-    <% end %>
-    </div>
   </div>
 </div>
