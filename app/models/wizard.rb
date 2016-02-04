@@ -39,7 +39,7 @@ class Wizard < ActiveRecord::Base
 			puts "same types"	
 		end
 		# acual battle decision mechanism
-		if w_move > o_move || w_move == (o_move-2)
+		if w_move == o_move + 1 || w_move == (o_move-2)
 			outcome = 1
 			self.exp_increment(opponent)
 			opponent.hp_decriment(self)
