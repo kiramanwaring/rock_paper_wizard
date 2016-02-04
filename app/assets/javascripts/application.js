@@ -19,7 +19,7 @@
 
 $(function(){
 	var faye = new Faye.Client('http://localhost:9292/faye');
-	faye.subscribe('/wizard_update', function (data) {
+	faye.subscribe('/battle_update', function (data) {
 		eval(data)
 	});
 });
