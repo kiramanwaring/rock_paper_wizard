@@ -1,7 +1,7 @@
-<%= link_to "BATTLE!", battle_path(@battle), method: :put, remote: true %>
-
-
-<%= link_to '<button type="button">paper</button>'.html_safe, wizard_path(@wizard), method: :put, remote: true %>
+<%= link_to '<button type="button">Rock</button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
+<%= link_to '<button type="button">Paper</button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
+<%= link_to '<button type="button">Scissors</button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
+<%= link_to '<button type="button">Run away!</button>'.html_safe, root_path %>
 
 
 <%= content_tag :div, id: "battle" do -%>

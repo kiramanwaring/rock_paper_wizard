@@ -24,15 +24,15 @@ class WizardsController < ApplicationController
   	# selects 5 random NPC's to fight, we can change this to all wizards later
   	@opponents= Wizard.where(user_id: 1).order("RANDOM()").first(5)
   end
-  def update
-  	@opponent=Wizard.find(session[:opponent_id])
-  	@wizard=Wizard.find(params[:id])
-  	if @opponent.lives == 0
-  		redirect_to opponent_session_path(@wizard)
-  	end
-  	# @wizard.battle(Wizard.find(session[:opponent_id]), 1)
-  	@wizard.save
-  end
+  # def update
+  # 	@opponent=Wizard.find(session[:opponent_id])
+  # 	@wizard=Wizard.find(params[:wizard_id])
+  # 	if @opponent.lives == 0
+  # 		redirect_to opponent_session_path(@wizard)
+  # 	end
+  # 	# @wizard.battle(Wizard.find(session[:opponent_id]), 1)
+  # 	@wizard.save
+  # end
 
   private
 
