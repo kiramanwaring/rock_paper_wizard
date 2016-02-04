@@ -42,12 +42,7 @@
 }
 
 .battles_show_battle {
-	border: 5px solid white;
-	background-color: white;
-	text-align: center;
-	margin-left: 50%;
-	transform: translateX(-50%);
-	width: 10vw;
+	background-color: rgba(1,1,1,0.0);
 }
 
 .battles_show_opponent th {
@@ -81,6 +76,23 @@
 	background-size: cover;
 	background-repeat: no-repate;
 	height: 100%;
+}
+
+.battles_show_battle_status {
+	margin: 0 auto;
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+.battles_show_battle {
+	background-color: rgba(1,1,1,0.0);
+	font-family: 'Bubblegum Sans', cursive;
+	font-size: 6vw;
+}
+
+.battles_show_battle_winner {
+	display: none;
+	background-color: rgba(1,1,1,0.0);
 }
 
 .battles_show_sprite_left {

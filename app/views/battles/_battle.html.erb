@@ -1,26 +1,18 @@
 <div id="battle_status" class="battles_show_battle">
-<table id="battle">
-  <tr>
-    <td><%= content_tag :span, "status:" %></td>
-    <% if @battle.status == 0 %>
-      <td> "Pick your move!" </td>
-    <% elsif @battle.status == 1 %>
-      <td> "OVER!" </td>
-    <% end %> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "winner:" %></td>
-    <% if @battle.status == 0 %>
-      <td> "No one yet...." </td>
-    <% elsif @battle.winner == 1 %>
+  <table id="battle" class="battles_show_battle_status">
+    <tr>
+      <td><%= content_tag :span %></td>
+      <% if @battle.status == 0 %>
+      <td>Select Your Move</td>
+      <% elsif @battle.winner == 1 %>
       <td><%= @wizard.name %></td>
-    <% elsif @battle.winner == 3 %>
+      <% elsif @battle.winner == 3 %>
       <td><%= @opponent.name %></td>
-    <% elsif @battle.winner == 2 %>
+      <% elsif @battle.winner == 2 %>
       <td> "It's a Draw!" </td>
-    <% end %> 
-  </tr>  
-</table>
+      <% end %> 
+    </tr>
+  </table>
 </div>
 
 <!-- -----------------------------------------------------------     ------------------ WIZARD ---------------------------------     ----------------------------------------------------------- -->
