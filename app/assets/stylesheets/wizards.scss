@@ -15,6 +15,36 @@ html, body {
 	height: 100%;
 }
 
+.wizards_show_book_left {
+	margin-top: 3%;
+	padding-left: 10%;
+	display: inline-block;
+	width: 29.5vw;
+	height: 42vw;
+	overflow: scroll;
+	font-family: 'Courgette', cursive;
+}
+
+.wizards_show_book_right {
+	position: absolute;
+	margin-top: 2%;
+	display: inline-block;
+	width: 31vw;
+	height: 42vw;
+	overflow: scroll;	
+	margin-left: 3%;
+	font-family: 'Courgette', cursive;
+}
+
+.wizards_show_book_bg {
+	background-image: url(http://img01.deviantart.net/8d7f/i/2013/102/e/4/blank_vintage_book_by_vixen525-d600pp8.png);
+	background-size: cover;
+	overflow: visibile;
+	height: 47.5vw;
+	width: 75vw;
+	margin: 0 auto;
+}
+
 .wizards_new_scroll {
 	background-image: url(http://vignette3.wikia.nocookie.net/tesfanon/images/2/2e/Scroll_opened.png/revision/latest?cb=20120116144947);
 	background-size: cover;
@@ -55,10 +85,53 @@ html, body {
 	font-family: 'Bubblegum Sans', cursive;	
 }
 
+.wizards_show_bg_img {
+	background-image: url(http://fullhdpictures.com/wp-content/uploads/2015/03/Old-Library-Wallpapers.jpg);
+	background-size: cover;
+	overflow: none;
+	z-index: 0;
+	height: 100%;
+}
 
+.users_show_wizard_stats_table {
+	position: relative;
+	bottom: 0;
+}
 
+.wizards_show_book_right h3 {
+	font-size: 3vw;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 0;
+}
 
+.wizards_show_book_left h3 {
+	font-size: 3vw;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 0;
+}
 
+.users_show_wizard_stats_table table {
+	background-color: #240134;
+	width: 100vw;
+	color: white;
+	text-align: center;
+}
+
+.users_show_wizard_stats_table td {
+	width: 14.2vw;
+	font-family: 'Bubblegum Sans', cursive;
+}
+
+.users_show_wizard_stats_table a {
+	color: white;
+	text-decoration: none;
+}
+
+.users_show_wizard_stats_table a:hover {
+	text-decoration: underline;
+}
 
 
 

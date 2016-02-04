@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: "dungeonmaster@RPSW.com", password: "qwerty")
+User.create(email: "rockpaperscissorswizard@gmail.com", password: "qwerty")
+User.create(email: "jimmy@internet.com", password: "qwerty")
 
 
 # these are the only strategies possible in RPSW, here they are sorted by style
@@ -38,17 +39,16 @@ Wizard.create(name: "Dark Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 
 Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 2, user_id: 1)
 Wizard.create(name: "Dark Wizard balanced", magic_type: 0, strategy_id: 7, user_id: 1)
 Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Jimmy's Wiz", magic_type: 1, strategy_id: 7, user_id: 2)
+
+
 
 # battles to populate the list in wizard show
 Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
-Battle.create(wizard_id: 3, opponent_wizard_id: 2, o_move: 0, status: 0)
-Battle.create(wizard_id: 2, opponent_wizard_id: 4, o_move: 0, status: 0)
-Battle.create(wizard_id: 4, opponent_wizard_id: 3, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
 
 
 

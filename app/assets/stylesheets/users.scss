@@ -5,6 +5,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
+	width: 100%;
 }
 
 .user_new_bg_img {
@@ -41,8 +42,8 @@ html, body {
 	width: 12vw;
 	margin: 0 auto;
 	text-align: center;
-	height: 22vw;
-	overflow: scroll;
+	height: 21.5vw;
+	overflow: none;
 }
 
 .user_new_box_title {
@@ -220,7 +221,7 @@ input:focus {
 	position: absolute;
 	margin-top: 2%;
 	display: inline-block;
-	width: 32vw;
+	width: 31vw;
 	height: 42vw;
 	overflow: scroll;	
 	margin-left: 3%;

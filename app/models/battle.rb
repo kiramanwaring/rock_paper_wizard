@@ -15,9 +15,12 @@ class Battle < ActiveRecord::Base
 	  self.status = 0
 	end
 	def fight
+		if Wizard.find(self.opponent_wizard_id).strategy_id
+			self.o_move=Strategy.find(Wizard.find(self.opponent_wizard_id).strategy_id).move()
+		end
 		if w_move && o_move
-			@winner = Wizard.find(@wizard_id).battle(Wizard.find(@opponent_wizard_id), w_move, o_move)
-			@status = 1
+			self.status = 1
+			self.winner = Wizard.find(self.wizard_id).battle(Wizard.find(self.opponent_wizard_id), self.w_move.to_i, self.o_move.to_i)
 		elsif w_move
 			puts "Waiting on opponent..."
 		elsif o_move
