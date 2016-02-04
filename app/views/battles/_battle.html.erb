@@ -28,7 +28,7 @@
   <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
   </tr>
 </table>
-
+<div id="battle_status">
 <table id="battle">
   <tr>
     <td><%= content_tag :span, "w_move:" %></td>
@@ -47,6 +47,7 @@
     <td><%= @battle.winner %></td> 
   </tr>  
 </table>
+</div>
 
 
 
