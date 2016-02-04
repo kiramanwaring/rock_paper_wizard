@@ -28,23 +28,29 @@
   <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
   </tr>
 </table>
+
+
 <div id="battle_status">
 <table id="battle">
   <tr>
-    <td><%= content_tag :span, "w_move:" %></td>
-  <td><%= @battle.w_move %></td> 
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "o_move:" %></td>
-  <td><%= @battle.o_move %></td> 
-  </tr>
-  <tr>
     <td><%= content_tag :span, "status:" %></td>
-    <td><%= @battle.status %></td> 
+    <% if @battle.status == 0 %>
+      <td> "About to begin..." </td>
+    <% elsif @battle.status == 1 %>
+      <td> "OVER!" </td>
+    <% end %> 
   </tr>
   <tr>
     <td><%= content_tag :span, "winner:" %></td>
-    <td><%= @battle.winner %></td> 
+    <% if @battle.status == 0 %>
+      <td> "No one yet...." </td>
+    <% elsif @battle.status == 1 %>
+      <td><%= @wizard.name %></td>
+    <% elsif @battle.status == 3 %>
+      <td><%= @opponent.name %></td>
+    <% elsif @battle.status == 2 %>
+      <td> "It's a Draw!" </td>
+    <% end %> 
   </tr>  
 </table>
 </div>

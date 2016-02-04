@@ -3,6 +3,10 @@ class WizardsController < ApplicationController
   	puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   	puts "Testing Creating a Wizard"
   	@wizard = Wizard.new(wizard_params)
+  	# names the wizard if the user left that feild blank
+  	if @wizard.name == ""
+  		@wizard.name = "Unnamed Wizard"
+  	end
   	@user = current_user
   	@user.wizards.push(@wizard)
   	@wizard.save
