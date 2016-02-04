@@ -10,4 +10,15 @@ before_action :current_user
 			@current_user = User.find(session[:user_id])
 		end
 	end
+	def current_wizard
+  		if session[:wizard_id]
+			@current_wizard = Wizard.find(session[:wizard_id])
+		end
+	end 
+	def current_opponent
+  		if session[:opponent_id]
+			@current_opponent = Wizard.find(session[:opponent_id])
+		end
+	end
+
 end

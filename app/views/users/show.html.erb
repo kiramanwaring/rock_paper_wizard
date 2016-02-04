@@ -28,7 +28,7 @@
 				 		<div class="small_wiz_icon_dark">
 				 		</div>
 				 		<% end %>
-				 		<span class="wizard_name"><%= link_to w.name, wizard_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
+				 		<span class="wizard_name"><%= link_to w.name, wizard_session_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
 						<% if @user.id == @current_user.id %>
 						<%= link_to "(-)", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
 						<% end %>

@@ -12,5 +12,8 @@ class BattlesController < ApplicationController
 
   def show
   	@battle=Battle.find(params[:id])
+  	@wizard=Wizard.find(@battle.wizard_id)
+  	@opponent=Wizard.find(@battle.opponent_wizard_id)
+  	@battle.fight
   end
 end

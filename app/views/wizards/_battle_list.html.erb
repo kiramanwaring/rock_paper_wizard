@@ -1,0 +1,3 @@
+<% @battles.each do |b| %>
+<h4><%= link_to Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name, battle_path(b) %></h4>
+<% end %>
