@@ -78,7 +78,7 @@ class Wizard < ActiveRecord::Base
 				self.default_values()
 			else
 				puts "Game Over for #{self.name}!"
-				self.level = 0
+				self.level = "Dead!"
 			end
 		end
 	end

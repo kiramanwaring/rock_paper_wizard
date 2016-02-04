@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 	 	redirect_to new_wizard_path
 	 end
 	 @current_user = current_user
-	 @wizards = @user.wizards
+	 @wizards = @user.wizards.where("level > ?", 0)
 	 @all_wizards = Wizard.order('wizards.level DESC')
 	end
 

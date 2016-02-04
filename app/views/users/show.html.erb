@@ -26,7 +26,7 @@
 							<% if w.magic_type == 0 %>
 								<div class="small_wiz_icon_dark"></div>
 							<% end %>
-							<% if @current_user == @user || w.level != 0 %>
+							<% if @current_user == @user && w.level != 0 %>
 								<span class="wizard_name"><%= link_to w.name, wizard_session_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
 							<% else %>
 								<span class="wizard_name"><%= w.name %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
