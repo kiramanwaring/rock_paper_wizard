@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('.button_to_hide').click( function () {
-		$(".button_to_hide").hide(100)
+		$(".battles_show_battle").fadeOut(1100);
+		$(".button_to_hide").hide(100);
 		$(".battles_show_sprite_left").animate({
 			bottom: "+=8vw",
 		}, 500);
