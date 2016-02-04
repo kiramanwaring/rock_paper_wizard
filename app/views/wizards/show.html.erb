@@ -1,43 +1,51 @@
- YOU
- <table>
-  <tr>
-    <th><%= @wizard.name %></th>
-    <th><%= @wizard.dark_or_light() %></th>
-  </tr>
-  <tr>
-    <td><%= content_tag :span, "Level:" %></td>
-    <td><%= content_tag :span, "Lives:" %></td>
-    <td><%= content_tag :span, "HP:" %></td>
-    <td><%= content_tag :span, "Attack:" %></td>
-    <td><%= content_tag :span, "Defense:" %></td>
-    <td><%= content_tag :span, "Belongs to User:" %></td>
-  </tr>
-  <tr>
-    <td><%= @wizard.level %></td> 
-    <td><%= @wizard.lives %></td> 
-    <td><%= @wizard.hp %></td> 
-    <td><%= @wizard.attack %></td> 
-    <td><%= @wizard.defense %></td> 
-    <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
-  </tr>
-</table> 
-
-<div class="users_show_book_bg">
-  <div class="users_show_book_left">
-    <!-- <div class="users_show_status_block"></div> -->
-    <div class="users_show_wizards_table">
-      <table>
-        <% @opponents.each do |w| %>
-        <tr>
-          <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
-        </tr>
-        <% end %>
-      </table>
-    </div>  
+<div class="wizards_show_bg_img">
+  <div class="nav">
+    <ul>
+      <% if @current_user != nil %>
+      <li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+      <li><%= link_to "My Profile", user_path(@current_user.id)
+      %></li>
+      <% end %>
+    </ul>
   </div>
-  <div class="users_show_book_right">
-    <% @battles.each do |b| %>
-      <h4><%= link_to Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name, battle_path(b) %></h4>
-    <% end %>
+  <div class="users_show_wizard_stats_table">
+    <table>
+      <tr>
+        <td style="font-size: 22px"><%= content_tag :span, "Selected Wizard:" %></td>
+        <td><%= content_tag :span, "Level:" %></td>
+        <td><%= content_tag :span, "Lives:" %></td>
+        <td><%= content_tag :span, "HP:" %></td>
+        <td><%= content_tag :span, "Attack:" %></td>
+        <td><%= content_tag :span, "Defense:" %></td>
+        <td><%= content_tag :span, "Belongs to User:" %></td>
+      </tr>
+      <tr>
+        <td style="font-size: 22px"><%= @wizard.name %></td>
+        <td><%= @wizard.level %></td> 
+        <td><%= @wizard.lives %></td> 
+        <td><%= @wizard.hp %></td> 
+        <td><%= @wizard.attack %></td> 
+        <td><%= @wizard.defense %></td> 
+        <td><%= link_to @wizard.user.email, user_path(@wizard.user) %></td> 
+      </tr>
+    </table> 
+  </div>
+  <div class="wizards_show_book_bg">
+    <div class="wizards_show_book_left">
+      <div class="wizards_show_wizards_table">
+        <table>
+          <% @opponents.each do |w| %>
+          <tr>
+            <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
+          </tr>
+          <% end %>
+        </table>
+      </div>  
+    </div>
+    <div class="wizards_show_book_right">
+      <% @battles.each do |b| %>
+      <h4><%= Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name %></h4>
+      <% end %>
+    </div>
   </div>
 </div>
