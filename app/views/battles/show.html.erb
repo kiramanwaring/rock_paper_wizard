@@ -1,9 +1,9 @@
 <div class="battles_show_bg_img">
 	<div id="moves" class="battles_show_move_buttons_run">
-		<%= link_to '<button class="button_to_hide" type="button"><img src="http://clipartion.com/wp-content/uploads/2015/11/cartoon-rock-clip-art-clipart-free-clipart.png"></button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
-		<%= link_to '<button class="button_to_hide" type="button"><img src="http://cliparts.co/cliparts/6cr/6x4/6cr6x4RLi.png"></button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
-		<%= link_to '<button class="button_to_hide" type="button"><img src="http://www.clker.com/cliparts/w/S/f/1/d/p/scissor-md.png"></button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
-		<%= link_to '<button type="button"><img src="http://www.clker.com/cliparts/n/c/D/4/F/m/run-md.png"></button>'.html_safe, wizard_path(@wizard) %>
+		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/rock.png"></button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
+		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/paper.png"></button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
+		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/scissors.png"></button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
+		<%= link_to '<button type="button"><img src="/assets/running.png"></button>'.html_safe, wizard_path(@wizard) %>
 	</div>
 	<%= content_tag :div, id: "battle" do -%>
 	<%= render :partial => 'battle', :object => @wizards %>
