@@ -9,54 +9,56 @@
 	</div>
 	<div class="users_show_book_bg">
 		<div class="users_show_book_left">
-		<div class="users_show_status_block">
-			<span class="users_show_email"><%= @user.email %>
-			</span>
-			<span class="users_show_new_wizard"><%= link_to "New Wizard", new_wizard_path %>
-			</span>
-	</div>
-		<div class="users_show_wizards_table">
-			<table>
-				<% @wizards.each do |w| %>
-			  	<tr>
-				 		<th>
-				 		<% if w.magic_type == 1 %>
-				 		<div class="small_wiz_icon_light">
-				 		</div>
-				 		<% end %>
-				 		<% if w.magic_type == 0 %>
-				 		<div class="small_wiz_icon_dark">
-				 		</div>
-				 		<% end %>
-				 		<span class="wizard_name"><%= link_to w.name, wizard_session_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
-						<% if @user.id == @current_user.id %>
-						<%= link_to "(-)", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
-						<% end %>
-		    		</th>
-			  	</tr>
-				<% end %>
-			</table>
-		</div>	
+			<div class="users_show_status_block">
+				<span class="users_show_email"><%= @user.email %>
+				</span>
+				<span class="users_show_new_wizard"><%= link_to "New Wizard", new_wizard_path %>
+				</span>
+			</div>
+			<div class="users_show_wizards_table">
+				<table>
+					<% @wizards.each do |w| %>
+					<tr>
+						<th>
+							<% if w.magic_type == 1 %>
+								<div class="small_wiz_icon_light"></div>
+							<% end %>
+							<% if w.magic_type == 0 %>
+								<div class="small_wiz_icon_dark"></div>
+							<% end %>
+							<% if @current_user == @user || w.level != 0 %>
+								<span class="wizard_name"><%= link_to w.name, wizard_session_path(w) %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
+							<% else %>
+								<span class="wizard_name"><%= w.name %></span><%= ": is a " + w.dark_or_light() + " -  level " + w.level.to_s %>
+							<% end %>
+							<% if @user.id == @current_user.id %>
+							<%= link_to "(-)", wizard_path(w),method: :delete, remote: true, class: "delete-wizard" %>
+							<% end %>
+						</th>
+					</tr>
+					<% end %>
+				</table>
+			</div>	
 		</div>
 		<div class="users_show_book_right">
 			<div class="users_show_book_right_title"><p>The Wizards Guild</p></div>
 			<% @all_wizards.each do |w| %>
-				<% if w.magic_type == 1 %>
-				 	<div class="small_wiz_icon_light">
-				 	</div>
-				<% end %>
-				<% if w.magic_type == 0 %>
-				 	<div class="small_wiz_icon_dark">
-				 	</div>
-				<% end %>
-				<h2><%= w.name + " at level " + w.level.to_s %></h2>
-				<p><%= "belongs to :" %>
+			<% if w.magic_type == 1 %>
+			<div class="small_wiz_icon_light">
+			</div>
+			<% end %>
+			<% if w.magic_type == 0 %>
+			<div class="small_wiz_icon_dark">
+			</div>
+			<% end %>
+			<h2><%= w.name + " at level " + w.level.to_s %></h2>
+			<p><%= "belongs to :" %>
 				<span class="owners_wizard_email"><%= link_to w.user.email, user_path(w.user) %></span></p>
+				<% end %>
+			</div>
+		</div>
+		<% if @user.id == @current_user.id %>
+		<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
 			<% end %>
 		</div>
 	</div>
-	<% if @user.id == @current_user.id %>
-	<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
-		<% end %>
-	</div>
-</div>

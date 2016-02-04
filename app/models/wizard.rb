@@ -39,7 +39,7 @@ class Wizard < ActiveRecord::Base
 			puts "same types"	
 		end
 		# acual battle decision mechanism
-		if w_move > o_move || w_move == (o_move-2)
+		if w_move == o_move + 1 || w_move == (o_move-2)
 			outcome = 1
 			self.exp_increment(opponent)
 			opponent.hp_decriment(self)
@@ -73,8 +73,13 @@ class Wizard < ActiveRecord::Base
 		self.hp = self.level+5
 		self.save!
 		if self.lives <=0 
-			puts "Game Over for #{self.name}!"
-			self.destroy()
+			# restarts NPC's renders user-wizards unusable
+			if self.user_id == 1
+				self.default_values()
+			else
+				puts "Game Over for #{self.name}!"
+				self.level = 0
+			end
 		end
 	end
 	# this function will be called after winning a battle to increment experience points and then level
