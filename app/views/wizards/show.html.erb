@@ -10,6 +10,7 @@
   </div>
   <div class="wizards_show_book_bg">
     <div class="wizards_show_book_left">
+        <h3>Challengers</h3>
       <div class="wizards_show_wizards_table">
         <table>
           <% @opponents.each do |w| %>
@@ -21,6 +22,7 @@
       </div>  
     </div>
     <div class="wizards_show_book_right">
+      <h3>Raging Conflicts</h3>
       <% @battles.each do |b| %>
       <h4><%= link_to Wizard.find(b.wizard_id).name + " vs. " + Wizard.find(b.opponent_wizard_id).name, battle_path(b) %></h4>
     <% end %>

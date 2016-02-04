@@ -29,7 +29,7 @@ html, body {
 	position: absolute;
 	margin-top: 2%;
 	display: inline-block;
-	width: 32vw;
+	width: 31vw;
 	height: 42vw;
 	overflow: scroll;	
 	margin-left: 3%;
@@ -96,7 +96,20 @@ html, body {
 .users_show_wizard_stats_table {
 	position: relative;
 	bottom: 0;
+}
+
+.wizards_show_book_right h3 {
+	font-size: 3vw;
 	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 0;
+}
+
+.wizards_show_book_left h3 {
+	font-size: 3vw;
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 0;
 }
 
 .users_show_wizard_stats_table table {
