@@ -3,7 +3,7 @@
 		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/rock.png"></button>'.html_safe, battle_path(@battle, :w_move => 0), method: :put, remote: true %>
 		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/paper.png"></button>'.html_safe, battle_path(@battle, :w_move => 1), method: :put, remote: true %>
 		<%= link_to '<button class="button_to_hide" type="button"><img src="/assets/scissors.png"></button>'.html_safe, battle_path(@battle, :w_move => 2), method: :put, remote: true %>
-		<%= link_to '<button type="button"><img src="/assets/running.png"></button>'.html_safe, root_path %>
+		<%= link_to '<button type="button"><img src="/assets/running.png"></button>'.html_safe, wizard_path(@wizard) %>
 	</div>
 	<%= content_tag :div, id: "battle" do -%>
 	<%= render :partial => 'battle', :object => @wizards %>
@@ -30,3 +30,4 @@
 		<div class="battles_show_fight_cloud_img"></div>
 	</div>
 </div>
+

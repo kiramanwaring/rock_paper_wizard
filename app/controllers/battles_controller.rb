@@ -10,8 +10,8 @@ class BattlesController < ApplicationController
 
   def update
   	@battle=Battle.find(params[:id])
-  	@wizard=Wizard.find(session[:wizard_id])
-  	@opponent=Wizard.find(session[:opponent_id])
+	@wizard=Wizard.find(@battle.wizard_id)
+  	@opponent=Wizard.find(@battle.opponent_wizard_id)
   	@battle.w_move=params[:w_move]
   	@battle.fight()
   	@battle.save()
