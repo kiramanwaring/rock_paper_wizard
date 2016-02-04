@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   delete 'sessions/destroy' => 'sessions#destroy', as: :log_out
   post 'wizards/new' => 'wizards#new', as: :create
   get 'opponent/:id' => "sessions#opponent", as: :opponent_session
+  get 'wizard/:id' => "sessions#wizard", as: :wizard_session
  
   resources :users, :wizards, :sessions, :battles
 

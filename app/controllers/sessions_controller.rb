@@ -22,13 +22,17 @@ class SessionsController < ApplicationController
     @user = User.new
   end
   def wizard
-  	
+  	@wizard=Wizard.find(params[:id])
+  	session[:wizard_id]=@wizard.id
+  	puts "Wizard SET"
+  	redirect_to wizard_path(@wizard)
   end
   def opponent
-  	@wizard=Wizard.find(params[:id])
-  	@opponent=Wizard.where(user_id: 1).order("RANDOM()").first
+  	@opponent=Wizard.find(params[:id])
   	session[:opponent_id]=@opponent.id
   	puts "OPPONENT SET"
-  	redirect_to wizard_path(@wizard)
+  	@battle=Battle.create(wizard_id: current_wizard.id, opponent_wizard_id: @opponent.id)
+  	@battle.save
+  	redirect_to wizard_path(current_wizard)
   end
 end

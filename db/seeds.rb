@@ -40,15 +40,15 @@ Wizard.create(name: "Dark Wizard balanced", magic_type: 0, strategy_id: 7, user_
 Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1)
 
 # battles to populate the list in wizard show
-Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0)
-Battle.create(wizard_id: 3, opponent_wizard_id: 2, o_move: 0)
-Battle.create(wizard_id: 2, opponent_wizard_id: 4, o_move: 0)
-Battle.create(wizard_id: 4, opponent_wizard_id: 3, o_move: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
+Battle.create(wizard_id: 3, opponent_wizard_id: 2, o_move: 0, status: 0)
+Battle.create(wizard_id: 2, opponent_wizard_id: 4, o_move: 0, status: 0)
+Battle.create(wizard_id: 4, opponent_wizard_id: 3, o_move: 0, status: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
+Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
 
 
 
