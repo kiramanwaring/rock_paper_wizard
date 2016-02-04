@@ -3,7 +3,8 @@ class BattlesController < ApplicationController
   end
 
   def create
-  	@battle=Battle.create()
+  	@battle=Battle.create(wizard_id: current_wizard.id, opponent_wizard_id: current_opponent.id)
+  	@battle.save
   	redirect_to battle_path(@battle)
   end
 
