@@ -8,6 +8,7 @@
 
 User.create(email: "rockpaperscissorswizard@gmail.com", password: "qwerty")
 User.create(email: "jimmy@internet.com", password: "qwerty")
+User.create(email: "Michael@Manwaring.com", password: "qwerty")
 
 
 # these are the only strategies possible in RPSW, here they are sorted by style
@@ -48,6 +49,19 @@ Wizard.create(name: "Dark Mostly Rock Wizard", magic_type: 0, strategy_id: 8, us
 Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 3, user_id: 1)
 Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1)
 Wizard.create(name: "Jimmy's Wiz", magic_type: 1, strategy_id: 7, user_id: 2)
+
+
+
+
+Wizard.create(name: "Merlin", magic_type: 1, strategy_id:12, user_id: 1, lives: )
+Wizard.create(name: "Harry Potter", magic_type: 1, strategy_id:7, user_id: 1)
+Wizard.create(name: "Ron Weasley", magic_type: 1, strategy_id:1, user_id: 1)
+Wizard.create(name: "Hermione Granger", magic_type: 1, strategy_id:9, user_id: 1)
+Wizard.create(name: "Gandalf", magic_type: 1, strategy_id:15, user_id: 1)
+Wizard.create(name: "Ice King", magic_type: 1, strategy_id:16, user_id: 1)
+Wizard.create(name: "Sabrina, the teenage witch", magic_type: 1, strategy_id:14, user_id: 1)
+Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1)
+Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1)
 
 
 
