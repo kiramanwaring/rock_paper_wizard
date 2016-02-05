@@ -5,9 +5,9 @@
       <% if @battle.status == 0 %>
       <td>Select Your Move</td>
       <% elsif @battle.winner == 1 %>
-      <td><%= @wizard.name %></td>
+      <td><%= @wizard.name + " Wins!" %></td>
       <% elsif @battle.winner == 3 %>
-      <td><%= @opponent.name %></td>
+      <td><%= @opponent.name + " Wins!" %></td>
       <% elsif @battle.winner == 2 %>
       <td> "It's a Draw!" </td>
       <% end %> 
@@ -15,7 +15,6 @@
   </table>
 </div>
 
-<!-- -----------------------------------------------------------     ------------------ WIZARD ---------------------------------     ----------------------------------------------------------- -->
 <div class="battles_show_wizard">
   <table id="wizard">
     <tr>
@@ -49,7 +48,6 @@
   </table>
 </div>
 
-<!-- -----------------------------------------------------------     ------------------ OPPONENT -------------------------------     ----------------------------------------------------------- -->
 <div class="battles_show_opponent">
   <table id="opponent">
     <tr>
