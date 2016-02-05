@@ -35,31 +35,31 @@ Strategy.create(rock: 3, paper: 2, scissors: 1)
 
 
 # these are example wizards for testing, they will eventually be the NPC library
-# Dark Wizards
-Wizard.create(name: "Dark Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 1)
-Wizard.create(name: "Dark Paper Wizard", magic_type: 0, strategy_id: 2, user_id: 1)
-Wizard.create(name: "Dark Scissors Wizard", magic_type: 0, strategy_id: 3, user_id: 1)
-Wizard.create(name: "Dark Rock of Paper Wizard", magic_type: 0, strategy_id: 4, user_id: 1)
-Wizard.create(name: "Dark Paper of Scissors Wizard", magic_type: 0, strategy_id: 5, user_id: 1)
-Wizard.create(name: "Dark Rock of Scissors Wizard", magic_type: 0, strategy_id: 6, user_id: 1)
-Wizard.create(name: "Dark Balanced Wizard", magic_type: 0, strategy_id: 7, user_id: 1)
-Wizard.create(name: "Dark Mostly Rock Wizard", magic_type: 0, strategy_id: 8, user_id: 1)
-Wizard.create(name: "Dark Mostly Paper Wizard", magic_type: 0, strategy_id: 9, user_id: 1)
-Wizard.create(name: "Dark Mostly Scissors Wizard", magic_type: 0, strategy_id: 10, user_id: 1)
-# Light Wizards
-Wizard.create(name: "Light Rock Wizard", magic_type: 1, strategy_id: 1, user_id: 1)
-Wizard.create(name: "Light Paper Wizard", magic_type: 1, strategy_id: 2, user_id: 1)
-Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 3, user_id: 1)
-Wizard.create(name: "Light Rock of Paper Wizard", magic_type: 1, strategy_id: 4, user_id: 1)
-Wizard.create(name: "Light Paper of Scissors Wizard", magic_type: 1, strategy_id: 5, user_id: 1)
-Wizard.create(name: "Light Rock of Scissors Wizard", magic_type: 1, strategy_id: 6, user_id: 1)
-Wizard.create(name: "Light Balanced Wizard", magic_type: 1, strategy_id: 7, user_id: 1)
-Wizard.create(name: "Light Mostly Rock Wizard", magic_type: 1, strategy_id: 8, user_id: 1)
-Wizard.create(name: "Light Mostly Paper Wizard", magic_type: 1, strategy_id: 9, user_id: 1)
-Wizard.create(name: "Light Mostly Scissors Wizard", magic_type: 1, strategy_id: 10, user_id: 1)
-#    Dark Famous Named Wizards
+# Wizards
+Wizard.create(name: "Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 1)
+Wizard.create(name: "Paper Wizard", magic_type: 0, strategy_id: 2, user_id: 1)
+Wizard.create(name: "Scissors Wizard", magic_type: 0, strategy_id: 3, user_id: 1)
+Wizard.create(name: "Rock of Paper Wizard", magic_type: 0, strategy_id: 4, user_id: 1)
+Wizard.create(name: "Paper of Scissors Wizard", magic_type: 0, strategy_id: 5, user_id: 1)
+Wizard.create(name: "Rock of Scissors Wizard", magic_type: 0, strategy_id: 6, user_id: 1)
+Wizard.create(name: "Balanced Wizard", magic_type: 0, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Mostly Rock Wizard", magic_type: 0, strategy_id: 8, user_id: 1)
+Wizard.create(name: "Mostly Paper Wizard", magic_type: 0, strategy_id: 9, user_id: 1)
+Wizard.create(name: "Mostly Scissors Wizard", magic_type: 0, strategy_id: 10, user_id: 1)
+# Wizards
+Wizard.create(name: "Rock Wizard", magic_type: 1, strategy_id: 1, user_id: 1)
+Wizard.create(name: "Paper Wizard", magic_type: 1, strategy_id: 2, user_id: 1)
+Wizard.create(name: "Scissors Wizard", magic_type: 1, strategy_id: 3, user_id: 1)
+Wizard.create(name: "Rock of Paper Wizard", magic_type: 1, strategy_id: 4, user_id: 1)
+Wizard.create(name: "Paper of Scissors Wizard", magic_type: 1, strategy_id: 5, user_id: 1)
+Wizard.create(name: "Rock of Scissors Wizard", magic_type: 1, strategy_id: 6, user_id: 1)
+Wizard.create(name: "Balanced Wizard", magic_type: 1, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Mostly Rock Wizard", magic_type: 1, strategy_id: 8, user_id: 1)
+Wizard.create(name: "Mostly Paper Wizard", magic_type: 1, strategy_id: 9, user_id: 1)
+Wizard.create(name: "Mostly Scissors Wizard", magic_type: 1, strategy_id: 10, user_id: 1)
+#    Famous Named Wizards
 Wizard.create(name: "Jimmy Wiz", magic_type: 0, strategy_id: 15, user_id: 2)
-Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1, lives: 50)
+Wizard.create(name: "Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1, lives: 50)
 Wizard.create(name: "Gabriel Murik", magic_type: 0, strategy_id: 11, user_id: 1, lives: 50)
 Wizard.create(name: "Seymour Crane", magic_type: 0, strategy_id: 12, user_id: 1, lives: 50)
 Wizard.create(name: "Tempest Zul", magic_type: 0, strategy_id: 13, user_id: 1, lives: 50)
@@ -84,10 +84,6 @@ Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
 Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
-
-
-
-
 
 puts "COMPLETE SEED"
 
