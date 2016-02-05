@@ -5,9 +5,9 @@
       <% if @battle.status == 0 %>
       <td>Select Your Move</td>
       <% elsif @battle.winner == 1 %>
-      <td><%= @wizard.name %></td>
+      <td><%= @wizard.name %> is Victorious</td>
       <% elsif @battle.winner == 3 %>
-      <td><%= @opponent.name %></td>
+      <td><%= @opponent.name %> is Victorious</td>
       <% elsif @battle.winner == 2 %>
       <td> "It's a Draw!" </td>
       <% end %> 
