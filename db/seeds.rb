@@ -35,9 +35,17 @@ Strategy.create(rock: 3, paper: 2, scissors: 1)
 
 
 # these are example wizards for testing, they will eventually be the NPC library
+# Dark Wizards
 Wizard.create(name: "Dark Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 1)
-Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 2, user_id: 1)
-Wizard.create(name: "Dark Wizard balanced", magic_type: 0, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Dark Paper Wizard", magic_type: 0, strategy_id: 2, user_id: 1)
+Wizard.create(name: "Dark Scissors Wizard", magic_type: 0, strategy_id: 3, user_id: 1)
+Wizard.create(name: "Dark Rock of Paper Wizard", magic_type: 0, strategy_id: 4, user_id: 1)
+Wizard.create(name: "Dark Paper of Scissors Wizard", magic_type: 0, strategy_id: 5, user_id: 1)
+Wizard.create(name: "Dark Rock of Scissors Wizard", magic_type: 0, strategy_id: 6, user_id: 1)
+Wizard.create(name: "Dark Balanced Wizard", magic_type: 0, strategy_id: 7, user_id: 1)
+Wizard.create(name: "Dark Mostly Rock Wizard", magic_type: 0, strategy_id: 8, user_id: 1)
+# Light Wizards
+Wizard.create(name: "Light Scissors Wizard", magic_type: 1, strategy_id: 3, user_id: 1)
 Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1)
 Wizard.create(name: "Jimmy's Wiz", magic_type: 1, strategy_id: 7, user_id: 2)
 

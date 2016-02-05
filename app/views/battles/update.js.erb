@@ -1,4 +1,7 @@
 // alert("TEST")
+
 <% notify "/battle_update" do %>
-$('#battle').html("<%= j render('battle') %>")
+setTimeout(function(){
+	$('#battle').html("<%= j render('battle') %>")
+}, 3500);
 <% end %>
