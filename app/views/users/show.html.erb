@@ -51,7 +51,7 @@
 			<div class="small_wiz_icon_dark">
 			</div>
 			<% end %>
-			<h2><%= w.name + " at level " + w.level.to_s %></h2>
+			<h2><%= w.name + " level " + w.level.to_s %></h2>
 			<p><%= "belongs to :" %>
 				<span class="owners_wizard_email"><%= link_to w.user.email, user_path(w.user) %></span></p>
 				<% end %>

@@ -15,7 +15,7 @@
         <table>
           <% @opponents.each do |w| %>
           <tr>
-            <th><%= link_to w.name, opponent_session_path(w) %><%= ": a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
+            <th><%= link_to w.name, opponent_session_path(w) %><%= " a " + w.dark_or_light() + " -  level " + w.level.to_s %></th>
           </tr>
           <% end %>
         </table>
