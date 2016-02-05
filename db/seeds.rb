@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(email: "rockpaperscissorswizard@gmail.com", password: "qwerty")
-User.create(email: "jimmy@internet.com", password: "qwerty")
-User.create(email: "Michael@Manwaring.com", password: "qwerty")
+User.create(email: "kyle@mccloskey.com", password: "qwerty")
+User.create(email: "michael@manwaring.com", password: "qwerty")
 
 
 # these are the only strategies possible in RPSW, here they are sorted by style
@@ -59,8 +59,6 @@ Wizard.create(name: "Light Mostly Rock Wizard", magic_type: 1, strategy_id: 8, u
 Wizard.create(name: "Light Mostly Paper Wizard", magic_type: 1, strategy_id: 9, user_id: 1)
 Wizard.create(name: "Light Mostly Scissors Wizard", magic_type: 1, strategy_id: 10, user_id: 1)
 #    Dark Famous Named Wizards
-Wizard.create(name: "Jimmy Wiz", magic_type: 0, strategy_id: 15, user_id: 2)
-Wizard.create(name: "Light Wizard balanced", magic_type: 1, strategy_id: 7, user_id: 1, lives: 50)
 Wizard.create(name: "Gabriel Murik", magic_type: 0, strategy_id: 11, user_id: 1, lives: 50)
 Wizard.create(name: "Seymour Crane", magic_type: 0, strategy_id: 12, user_id: 1, lives: 50)
 Wizard.create(name: "Tempest Zul", magic_type: 0, strategy_id: 13, user_id: 1, lives: 50)
@@ -79,25 +77,25 @@ Wizard.create(name: "Wicked Witch of the West", magic_type: 0, strategy_id: 13, 
 Wizard.create(name: "Morgan le Fay", magic_type: 0, strategy_id: 14, user_id: 1, lives: 50)
 Wizard.create(name: "Circe", magic_type: 0, strategy_id: 15, user_id: 1, lives: 50)
 
-
-Wizard.create(name: "Merlin", magic_type: 1, strategy_id:12, user_id: 1, lives: )
-Wizard.create(name: "Harry Potter", magic_type: 1, strategy_id:7, user_id: 1)
-Wizard.create(name: "Ron Weasley", magic_type: 1, strategy_id:1, user_id: 1)
-Wizard.create(name: "Hermione Granger", magic_type: 1, strategy_id:9, user_id: 1)
-Wizard.create(name: "Gandalf", magic_type: 1, strategy_id:15, user_id: 1)
-Wizard.create(name: "Ice King", magic_type: 1, strategy_id:16, user_id: 1)
-Wizard.create(name: "Sabrina, the teenage witch", magic_type: 1, strategy_id:14, user_id: 1)
-Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1)
-Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1)
+#    light Famous Named Wizards
+Wizard.create(name: "Merlin", magic_type: 1, strategy_id:12, user_id: 1, lives: 50)
+Wizard.create(name: "Harry Potter", magic_type: 1, strategy_id:7, user_id: 1, lives: 50)
+Wizard.create(name: "Ron Weasley", magic_type: 1, strategy_id:1, user_id: 1, lives: 50)
+Wizard.create(name: "Hermione Granger", magic_type: 1, strategy_id:9, user_id: 1, lives: 50)
+Wizard.create(name: "Gandalf", magic_type: 1, strategy_id:15, user_id: 1, lives: 50)
+Wizard.create(name: "Ice King", magic_type: 1, strategy_id:16, user_id: 1, lives: 50)
+Wizard.create(name: "Sabrina, the teenage witch", magic_type: 1, strategy_id:14, user_id: 1, lives: 50)
+Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1, lives: 50)
+Wizard.create(name: "Glenda, the good witch", magic_type: 1, strategy_id:10, user_id: 1, lives: 50)
 
 
 
 # battles to populate the list in wizard show
-Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
-Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
+# Battle.create(wizard_id: 1, opponent_wizard_id: 2, o_move: 0, status: 0)
+# Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
+# Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
+# Battle.create(wizard_id: 1, opponent_wizard_id: 3, o_move: 0, status: 0)
+# Battle.create(wizard_id: 1, opponent_wizard_id: 4, o_move: 0, status: 0)
 
 
 
