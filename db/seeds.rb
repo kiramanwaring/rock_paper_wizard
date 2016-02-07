@@ -36,7 +36,6 @@ Strategy.create(rock: 3, paper: 2, scissors: 1)
 
 
 # these are example wizards for testing, they will eventually be the NPC library
-<<<<<<< HEAD
 # Wizards
 Wizard.create(name: "Rock Wizard", magic_type: 0, strategy_id: 1, user_id: 1)
 Wizard.create(name: "Paper Wizard", magic_type: 0, strategy_id: 2, user_id: 1)
