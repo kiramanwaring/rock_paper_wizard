@@ -15,6 +15,7 @@
   - You'll have to play to figure out the conditions of LvD
 ### The Project
   - Built on Rails
+  - This uses Websockets and Puma so you must have both servers running
 
 ### Done by:
   - Michael Manwaring
