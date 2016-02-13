@@ -15,6 +15,13 @@
      - Dark vs. Light
   - You'll have to play to figure out the conditions of LvD
 
+### Gameplay
+  - After signing up/in, you will be directed to create a Wizard. 
+  - You can give it any name you like, and choose whether it is a light wizard or a dark wizard. If you do not give the Wizard a name, it will be called "Unnamed Wizard"
+  - from there you will see two lists of wizards: yours, and leaderboard of all wizards sorted by level
+  - Click on the name of one of your wizards to enter that wizards battles page
+  - Once on the battles page you can select opponents on the left, and select a battle to fight on the right. clicking a battle will take you to the arena for the high stakes game of Rock, Paper, Scissors (WIZARD!)
+
 ### The Project
   - Built on Rails
   - Seedfile contains many opponent wizards, be sure to `rake db:seed` before playing
